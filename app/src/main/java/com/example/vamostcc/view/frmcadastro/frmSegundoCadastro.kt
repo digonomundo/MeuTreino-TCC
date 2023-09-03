@@ -69,7 +69,6 @@ class home : AppCompatActivity() {
 
                     var entrar = Intent (this , telaUsuario::class.java)
                     startActivity(entrar)
-                
 
             }
         }

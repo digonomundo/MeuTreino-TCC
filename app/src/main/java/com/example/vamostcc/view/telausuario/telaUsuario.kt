@@ -50,18 +50,26 @@ class telaUsuario : AppCompatActivity() {
                     return imc
                 }
 
-
                 val imc = calcularIMC(peso, altura)
 
-               /* if (imc < 18.5) {
-                    println("Abaixo do peso")
-                } else if (imc >= 18.5 && imc < 24.9) {
-                    println("Peso saudável")
-                } else if (imc >= 25.0 && imc < 29.9) {
-                    println("Sobrepeso")
-                } else {
-                    println("Obesidade")
-                }*/
+                if (imc < 18.5) {
+                    binding.txtResultadoImc.setText("você está Abaixo do peso")
+                }
+                else if (imc >= 18.5 && imc < 24.9) {
+                    binding.txtResultadoImc.setText("você está com o peso Saudável")
+                }
+                else if (imc >= 25.0 && imc < 29.9) {
+                    binding.txtResultadoImc.setText("você está com Sobrepeso")
+                }
+                else if (imc >= 30.0 && imc < 34.9) {
+                    binding.txtResultadoImc.setText("você está começando a virar a Thais Carla")
+                }
+                else if (imc >= 35.0 && imc < 39.9) {
+                    binding.txtResultadoImc.setText("você virou a Thais Carla")
+                }
+                else {
+                    binding.txtResultadoImc.setText("você está pior que a Thais Carla")
+                }
 
 
                 fun formatarImc(imc: Double): String {
@@ -84,12 +92,7 @@ class telaUsuario : AppCompatActivity() {
                 val aguaDouble = agua
                 val aguaFormatado = formatarAgua(aguaDouble)
 
-
-
-
-
                 binding.txtQtdAgua.setText("consumo de água diário: $aguaFormatado litros")
-
 
                 binding.txtImc.setText("seu imc é: $imcFormatado")
 
@@ -100,7 +103,6 @@ class telaUsuario : AppCompatActivity() {
             .addOnFailureListener{
                 Toast.makeText(this, "erro", Toast.LENGTH_SHORT).show()
             }
-
 
 
 
