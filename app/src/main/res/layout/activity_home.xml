@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".view.home.home">
+
+        <ImageView
+            android:layout_width="300sp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50sp"
+            android:layout_gravity="center"
+            android:src="@drawable/cadastrodnv"/>
+
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:hint=" Seu Nome:"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/edtPeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/baseline_monitor_weight_24"
+            android:hint=" Informe seu peso: "
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/edtAltura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/baseline_height_24"
+            android:hint=" Sua Altura: "
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/edtIdade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/baseline_date_range_24"
+            android:hint="  Idade:"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="15dp" />
+
+
+        <Button
+            android:id="@+id/btnSalvarDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="@color/cinza"
+            android:text="Salvar"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

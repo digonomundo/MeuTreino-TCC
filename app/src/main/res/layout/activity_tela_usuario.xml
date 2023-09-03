@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".view.telausuario.telaUsuario"
+    android:orientation="vertical"
+    >
+
+  <RelativeLayout
+      android:layout_marginTop="40dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+
+    <View
+        android:id="@+id/circuloUsuario"
+        android:layout_centerInParent="true"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circulo_usuario"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_centerInParent="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/baseline_person_outline_24"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="25dp" />
+  </RelativeLayout>
+
+
+
+  <TextView
+      android:id="@+id/txtNome"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="30dp"
+      android:layout_gravity="center"
+      android:text="Nome: "
+      android:textColor="@color/white"
+      android:textSize="30sp"
+      android:layout_marginTop="0sp"/>
+
+  <TextView
+      android:id="@+id/txtAltura"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="0sp"
+      android:layout_gravity="center"
+      android:text="Altura: "
+      android:textColor="@color/white"
+      android:textSize="20sp"
+      android:layout_marginTop="0sp"/>
+
+  <TextView
+      android:id="@+id/txtPeso"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="0sp"
+      android:layout_gravity="center"
+      android:text="Peso: "
+      android:textColor="@color/white"
+      android:textSize="20sp"
+      android:layout_marginTop="0sp"/>
+
+  <TextView
+      android:id="@+id/txtIdade"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="0sp"
+      android:layout_gravity="center"
+      android:text="Idade: "
+      android:textColor="@color/white"
+      android:textSize="20sp"
+      android:layout_marginTop="0sp"/>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+  <TextView
+      android:id="@+id/txtImc"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="0sp"
+      android:layout_marginStart="30dp"
+      android:layout_gravity="center"
+      android:text="Imc: "
+      android:textColor="@color/white"
+      android:textSize="20sp"
+      android:layout_marginTop="0sp"/>
+
+
+  <TextView
+      android:id="@+id/txtQtdAgua"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="0sp"
+      android:layout_marginLeft="120dp"
+      android:layout_gravity="center"
+      android:text="hidratação indicada"
+      android:textColor="@color/white"
+      android:textSize="20sp"
+      android:layout_marginTop="0sp"/>
+
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/btnDeslogar"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:layout_marginStart="30dp"
+      android:layout_marginEnd="30dp"
+      android:layout_marginTop="30sp"
+      android:layout_marginBottom="217dp"
+      android:layout_gravity="center"
+      android:backgroundTint="@color/cinza"
+      android:text="Sair"
+      />
+
+</LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>

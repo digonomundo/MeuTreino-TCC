@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">vamosTcc</string>
+    <string name="titulo_frm_cadastro">testando isso AQUI</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_senha">Senha</string>
+    <string name="txt_home">Estamos quase lá!</string>
+
+</resources>
