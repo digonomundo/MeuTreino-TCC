@@ -5,6 +5,8 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import java.text.NumberFormat
+import java.util.Locale
 import android.widget.Toast
 import com.example.vamostcc.databinding.ActivityHomeBinding
 import com.example.vamostcc.view.telausuario.telaUsuario
@@ -27,26 +29,28 @@ class home : AppCompatActivity() {
 
         binding.btnSalvarDados.setOnClickListener { view ->
             val nome = binding.edtNome.text.toString()
-            val peso = binding.edtPeso.text.toString()
-            val altura = binding.edtAltura.text.toString()
+            val strPeso = binding.edtPeso.text.toString()
+            val strAltura  = binding.edtAltura.text.toString()
             val idade = binding.edtIdade.text.toString()
 
 
-            if (nome.isEmpty() && peso.isEmpty() && altura.isEmpty() && idade.isEmpty()) {
+            if (nome.isEmpty() ||  strPeso.isEmpty() || strAltura.isEmpty() || idade.isEmpty()) {
                 val avisoVazio =
                     Snackbar.make(view, "Preencha todos os Campos", Snackbar.LENGTH_SHORT)
                 avisoVazio.setBackgroundTint(Color.RED)
                 avisoVazio.show()
             } else {
 
+                val peso = strPeso.toDouble()
+                val altura = strAltura.toDouble()
+                val idade = idade.toInt()
+
 
                 val usuariosMap = hashMapOf(
-
                     "nome" to (nome),
                     "peso" to (peso),
                     "altura" to (altura),
                     "idade" to (idade)
-
                 )
 
 

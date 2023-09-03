@@ -44,7 +44,7 @@
             android:background="@color/white"
             android:drawableLeft="@drawable/baseline_monitor_weight_24"
             android:hint=" Informe seu peso: "
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:maxLines="1"
             android:padding="15dp" />
 
@@ -57,8 +57,8 @@
             android:layout_marginEnd="40dp"
             android:background="@color/white"
             android:drawableLeft="@drawable/baseline_height_24"
-            android:hint=" Sua Altura: "
-            android:inputType="number"
+            android:hint=" Sua Altura em Metros: "
+            android:inputType="numberDecimal"
             android:maxLines="1"
             android:padding="15dp" />
 
