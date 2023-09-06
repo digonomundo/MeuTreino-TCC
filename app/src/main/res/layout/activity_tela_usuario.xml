@@ -23,7 +23,6 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
 
-
     <View
         android:id="@+id/circuloUsuario"
         android:layout_centerInParent="true"
@@ -41,9 +40,9 @@
         android:src="@drawable/baseline_person_outline_24"
         tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="25dp" />
+
+
   </RelativeLayout>
-
-
 
   <TextView
       android:id="@+id/txtNome"
@@ -56,14 +55,48 @@
       android:textSize="30sp"
       android:layout_marginTop="0sp"/>
 
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginLeft="30dp">
+
   <TextView
-      android:id="@+id/txtAltura"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:paddingTop="0sp"
       android:layout_gravity="center"
       android:text="Altura: "
-      android:textColor="@color/white"
+      android:textColor="@color/cinzaClaro"
+      android:textSize="20sp"
+      android:layout_marginTop="0sp"/>
+
+    <TextView
+        android:id="@+id/txtAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="0sp"
+        android:layout_gravity="center"
+        android:text=" "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="0sp"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginLeft="30dp">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="0sp"
+      android:layout_gravity="center"
+      android:text="Peso: "
+      android:textColor="@color/cinzaClaro"
       android:textSize="20sp"
       android:layout_marginTop="0sp"/>
 
@@ -73,8 +106,25 @@
       android:layout_height="wrap_content"
       android:paddingTop="0sp"
       android:layout_gravity="center"
-      android:text="Peso: "
+      android:text=" "
       android:textColor="@color/white"
+      android:textSize="20sp"
+      android:layout_marginTop="0sp"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginLeft="30dp">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="0sp"
+      android:layout_gravity="center"
+      android:text="Idade: "
+      android:textColor="@color/cinzaClaro"
       android:textSize="20sp"
       android:layout_marginTop="0sp"/>
 
@@ -84,27 +134,41 @@
       android:layout_height="wrap_content"
       android:paddingTop="0sp"
       android:layout_gravity="center"
-      android:text="Idade: "
+      android:text=" "
       android:textColor="@color/white"
       android:textSize="20sp"
       android:layout_marginTop="0sp"/>
+  </LinearLayout>
+
 
   <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:orientation="horizontal">
+      android:orientation="horizontal"
+      android:layout_marginLeft="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="0sp"
+        android:layout_gravity="center"
+        android:text="Imc: "
+        android:textColor="@color/cinzaClaro"
+        android:textSize="20sp"
+        android:layout_marginTop="0sp"/>
 
   <TextView
       android:id="@+id/txtImc"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:paddingTop="0sp"
-      android:layout_marginStart="30dp"
       android:layout_gravity="center"
-      android:text="Imc: "
-      android:textColor="@color/white"
+      android:text=" "
+      android:textColor="@color/cinzaClaro"
       android:textSize="20sp"
       android:layout_marginTop="0sp"/>
+
+  </LinearLayout>
 
 
   <TextView
@@ -112,14 +176,11 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:paddingTop="0sp"
-      android:layout_marginLeft="120dp"
       android:layout_gravity="center"
       android:text="hidratação indicada"
       android:textColor="@color/white"
       android:textSize="20sp"
       android:layout_marginTop="0sp"/>
-
-  </LinearLayout>
 
   <TextView
       android:id="@+id/txtResultadoImc"
@@ -127,11 +188,10 @@
       android:layout_height="wrap_content"
       android:paddingTop="0sp"
       android:layout_gravity="center"
-      android:text="hidratação indicada"
+      android:text="resultado Imc"
       android:textColor="@color/white"
       android:textSize="20sp"
       android:layout_marginTop="0sp"/>
-
 
   <Button
       android:id="@+id/btnDeslogar"
@@ -139,12 +199,13 @@
       android:layout_height="60dp"
       android:layout_marginStart="30dp"
       android:layout_marginEnd="30dp"
-      android:layout_marginTop="30sp"
-      android:layout_marginBottom="217dp"
+      android:layout_marginTop="120dp"
       android:layout_gravity="center"
       android:backgroundTint="@color/cinza"
       android:text="Sair"
       />
+
+
 
 </LinearLayout>
 

@@ -7,10 +7,14 @@ import android.os.Bundle
 import com.example.vamostcc.databinding.ActivityTelaRecuperarSenhaBinding
 import com.example.vamostcc.view.frmlogin.frmLogin
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthEmailException
+import com.google.firebase.auth.FirebaseAuthException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 
 class telaRecuperarSenha : AppCompatActivity() {
     private lateinit var binding: ActivityTelaRecuperarSenhaBinding
-
+    private val auth = FirebaseAuth.getInstance()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +35,24 @@ class telaRecuperarSenha : AppCompatActivity() {
                 teste.setBackgroundTint(Color.RED)
                 teste.show()
             } else {
+                auth.sendPasswordResetEmail(email).addOnSuccessListener {
+                    Snackbar.make(view, "Enviamos o link no seu e-mail para a redefinição de senha", Snackbar.LENGTH_SHORT).setBackgroundTint(Color.GREEN).show()
+
+                }.addOnFailureListener {
+                    //Snackbar.make(view, it.toString(), Toast.LENGTH_SHORT).show()
+
+                        exception ->
+                    val msgDeErros = when (exception) {
+                        is FirebaseAuthEmailException -> "Digite um Email cadastrado"
+                        is FirebaseAuthInvalidUserException -> "Digite um Email cadastrado"
+                        is FirebaseAuthException -> "Digite um Email válido"
+
+                        else -> "falha"
+                    }
+                    Snackbar.make(view, msgDeErros, Snackbar.LENGTH_SHORT).setBackgroundTint(Color.RED).show()
+                }
+
+
 
             }
 

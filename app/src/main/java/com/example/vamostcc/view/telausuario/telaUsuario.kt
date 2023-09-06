@@ -1,6 +1,8 @@
 package com.example.vamostcc.view.telausuario
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.Color.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -39,11 +41,10 @@ class telaUsuario : AppCompatActivity() {
                 val idade = it.data?.get("idade").toString().toInt()
 
 
-                binding.txtNome.setText("olá $nome")
-                binding.txtPeso.setText("Peso: $peso kg")
-                binding.txtAltura.setText("Altura: $altura metros")
-                binding.txtIdade.setText("Idade: $idade anos")
-
+                binding.txtNome.setText("$nome")
+                binding.txtPeso.setText(" $peso kg")
+                binding.txtAltura.setText(" $altura metros")
+                binding.txtIdade.setText(" $idade anos")
 
                 fun calcularIMC(peso: Double, altura: Double): Double {
                     val imc = peso / (altura * altura)
@@ -54,21 +55,27 @@ class telaUsuario : AppCompatActivity() {
 
                 if (imc < 18.5) {
                     binding.txtResultadoImc.setText("você está Abaixo do peso")
+                    binding.txtResultadoImc.setTextColor(RED)
                 }
                 else if (imc >= 18.5 && imc < 24.9) {
                     binding.txtResultadoImc.setText("você está com o peso Saudável")
+                    binding.txtResultadoImc.setTextColor(GREEN)
                 }
                 else if (imc >= 25.0 && imc < 29.9) {
                     binding.txtResultadoImc.setText("você está com Sobrepeso")
+                    binding.txtResultadoImc.setTextColor(YELLOW)
                 }
                 else if (imc >= 30.0 && imc < 34.9) {
                     binding.txtResultadoImc.setText("você está começando a virar a Thais Carla")
+                    binding.txtResultadoImc.setTextColor(RED)
                 }
                 else if (imc >= 35.0 && imc < 39.9) {
                     binding.txtResultadoImc.setText("você virou a Thais Carla")
+                    binding.txtResultadoImc.setTextColor(RED)
                 }
                 else {
                     binding.txtResultadoImc.setText("você está pior que a Thais Carla")
+                    binding.txtResultadoImc.setTextColor(RED)
                 }
 
 
