@@ -42,9 +42,9 @@ class telaUsuario : AppCompatActivity() {
 
 
                 binding.txtNome.setText("$nome")
-                binding.txtPeso.setText(" $peso kg")
-                binding.txtAltura.setText(" $altura metros")
-                binding.txtIdade.setText(" $idade anos")
+                binding.txtPeso.setText("$peso kg")
+                binding.txtAltura.setText("$altura metros")
+                binding.txtIdade.setText("$idade anos")
 
                 fun calcularIMC(peso: Double, altura: Double): Double {
                     val imc = peso / (altura * altura)
@@ -62,7 +62,7 @@ class telaUsuario : AppCompatActivity() {
                     binding.txtResultadoImc.setTextColor(GREEN)
                 }
                 else if (imc >= 25.0 && imc < 29.9) {
-                    binding.txtResultadoImc.setText("você está com Sobrepeso")
+                    binding.txtResultadoImc.setText("você está Sobrepeso")
                     binding.txtResultadoImc.setTextColor(YELLOW)
                 }
                 else if (imc >= 30.0 && imc < 34.9) {
@@ -99,9 +99,9 @@ class telaUsuario : AppCompatActivity() {
                 val aguaDouble = agua
                 val aguaFormatado = formatarAgua(aguaDouble)
 
-                binding.txtQtdAgua.setText("consumo de água diário: $aguaFormatado litros")
+                binding.txtQtdAgua.setText("$aguaFormatado litros")
 
-                binding.txtImc.setText("seu imc é: $imcFormatado")
+                binding.txtImc.setText("$imcFormatado")
 
 
             }
