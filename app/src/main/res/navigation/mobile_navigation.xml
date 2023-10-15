@@ -23,11 +23,7 @@
         android:label="@string/menu_perfil_usuario"
         tools:layout="@layout/fragment_tela_usuario" />
 
-    <activity
-        android:id="@+id/act_tela_usuario"
-        android:name="com.example.vamostcc.view.telausuario.telaUsuario"
-        tools:layout="@layout/activity_tela_usuario"
-        />
+
 
 
 

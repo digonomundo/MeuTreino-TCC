@@ -28,10 +28,7 @@ class telaPrincipal : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarTelaPrincipal.toolbar)
 
-        binding.appBarTelaPrincipal.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_tela_principal)
