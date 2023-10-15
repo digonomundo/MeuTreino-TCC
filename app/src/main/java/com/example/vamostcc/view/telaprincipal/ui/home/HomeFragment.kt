@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.vamostcc.view.telaprincipal.databinding.FragmentHomeBinding
+import com.example.vamostcc.databinding.FragmentHomeBinding
+
 
 class HomeFragment : Fragment() {
 
@@ -28,7 +29,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
+        val textView: TextView = binding.txtTela
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

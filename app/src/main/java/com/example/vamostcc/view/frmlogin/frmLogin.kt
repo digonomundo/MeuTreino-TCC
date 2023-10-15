@@ -7,6 +7,7 @@ import android.os.Bundle
 import com.example.vamostcc.databinding.ActivityFrmLoginBinding
 import com.example.vamostcc.view.frmrecuperarsenha.telaRecuperarSenha
 import com.example.vamostcc.view.frmcadastro.frmCadastro
+import com.example.vamostcc.view.telaprincipal.telaPrincipal
 import com.example.vamostcc.view.telausuario.telaUsuario
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
@@ -23,7 +24,7 @@ class frmLogin : AppCompatActivity() {
     private val auth = FirebaseAuth.getInstance()
 
     private fun irPraTelaHome(){
-        val telaHome = Intent(this,telaUsuario::class.java)
+        val telaHome = Intent(this, telaPrincipal::class.java)
         startActivity(telaHome)
         finish()
     }

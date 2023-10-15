@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.vamostcc">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -21,7 +21,8 @@
             android:theme="@style/Theme.VamosTcc.NoActionBar" />
         <activity
             android:name=".view.telausuario.telaUsuario"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.VamosTcc.NoActionBar"/>
         <activity
             android:name=".view.frmlogin.frmLogin"
             android:exported="false" />
@@ -39,7 +40,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

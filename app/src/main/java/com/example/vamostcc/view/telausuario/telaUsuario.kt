@@ -16,19 +16,17 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 
-class telaUsuario : AppCompatActivity() {
-    private lateinit var binding: ActivityTelaUsuarioBinding
+class   telaUsuario : AppCompatActivity() {
 
+    private lateinit var binding: ActivityTelaUsuarioBinding
     private val auth = FirebaseAuth.getInstance()
     private var db = FirebaseFirestore.getInstance()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTelaUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-
 
         val idUsuario = FirebaseAuth.getInstance().currentUser!!.uid
         val ref = db.collection("usuarios").document(idUsuario)
@@ -39,7 +37,6 @@ class telaUsuario : AppCompatActivity() {
                 val peso : Double = it.data?.get("peso").toString().toDouble()
                 val altura  : Double = it.data?.get("altura").toString().toDouble()
                 val idade = it.data?.get("idade").toString().toInt()
-
 
                 binding.txtNome.setText("$nome")
                 binding.txtPeso.setText("$peso kg")
@@ -103,16 +100,11 @@ class telaUsuario : AppCompatActivity() {
 
                 binding.txtImc.setText("$imcFormatado")
 
-
             }
 
-        }
-            .addOnFailureListener{
+        }.addOnFailureListener{
                 Toast.makeText(this, "erro", Toast.LENGTH_SHORT).show()
-            }
-
-
-
+        }
 
         binding.btnDeslogar.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
@@ -120,9 +112,5 @@ class telaUsuario : AppCompatActivity() {
             startActivity(voltarFrmLogin)
             finish()
         }
-
-
-
     }
-
 }

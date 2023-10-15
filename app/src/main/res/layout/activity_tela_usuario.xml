@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    tools:context=".view.telaprincipal.ui.perfilusuario.TelaUsuarioFragment">
+
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -14,6 +16,16 @@
     tools:context=".view.telausuario.telaUsuario"
     android:orientation="vertical"
     >
+
+  <TextView
+      android:id="@+id/text_slideshow"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:textAlignment="center"
+      android:textSize="20sp" />
 
   <RelativeLayout
       android:layout_marginTop="40dp"
@@ -76,7 +88,6 @@
         android:layout_height="wrap_content"
         android:paddingTop="0sp"
         android:layout_gravity="center"
-        android:text=" "
         android:textColor="@color/white"
         android:textSize="20sp"
         android:layout_marginTop="0sp"/>
@@ -104,7 +115,6 @@
       android:layout_height="wrap_content"
       android:paddingTop="0sp"
       android:layout_gravity="center"
-      android:text=" "
       android:textColor="@color/white"
       android:textSize="20sp"
       android:layout_marginTop="0sp"/>
@@ -132,7 +142,6 @@
       android:layout_height="wrap_content"
       android:paddingTop="0sp"
       android:layout_gravity="center"
-      android:text=" "
       android:textColor="@color/white"
       android:textSize="20sp"
       android:layout_marginTop="0sp"/>
@@ -162,7 +171,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="0sp"
         android:paddingTop="0sp"
-        android:text=" "
         android:textColor="@color/white"
         android:textSize="20sp" />
 
@@ -192,7 +200,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="0sp"
         android:paddingTop="0sp"
-        android:text=" "
         android:textColor="@color/white"
         android:textSize="20sp" />
 
@@ -210,7 +217,6 @@
         android:layout_height="wrap_content"
         android:paddingTop="0sp"
         android:layout_gravity="center"
-        android:text=" "
         android:textColor="@color/white"
         android:textSize="20sp"
         android:layout_marginTop="0sp"/>
@@ -236,3 +242,4 @@
 </LinearLayout>
 
   </androidx.core.widget.NestedScrollView>
+
