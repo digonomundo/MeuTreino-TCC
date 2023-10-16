@@ -5,6 +5,8 @@ import android.graphics.Color
 import android.graphics.Color.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.RelativeLayout
 import android.widget.Toast
 import com.example.vamostcc.R
 import java.text.NumberFormat

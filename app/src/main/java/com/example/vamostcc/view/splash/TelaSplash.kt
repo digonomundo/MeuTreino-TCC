@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import com.example.vamostcc.R
 import com.example.vamostcc.view.frmlogin.frmLogin
+import com.google.firebase.auth.FirebaseAuth
 
 class telaSplash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +14,8 @@ class telaSplash : AppCompatActivity() {
         setContentView(R.layout.activity_tela_splash)
 
         supportActionBar?.hide()
+
+
 
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, frmLogin::class.java)

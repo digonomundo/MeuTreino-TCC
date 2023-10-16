@@ -12,5 +12,7 @@
     <color name="Azul">#03A9F4</color>
     <color name="green">#2FFF00</color>
     <color name="roxo">#3A2068</color>
+    <color name="red">#FF0007</color>
+    <color name="yellow">#FFEB3B</color>
 
 </resources>

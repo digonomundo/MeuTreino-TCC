@@ -9,6 +9,7 @@ import java.text.NumberFormat
 import java.util.Locale
 import android.widget.Toast
 import com.example.vamostcc.databinding.ActivityHomeBinding
+import com.example.vamostcc.view.telaprincipal.telaPrincipal
 import com.example.vamostcc.view.telausuario.telaUsuario
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
@@ -67,7 +68,7 @@ class home : AppCompatActivity() {
                     }
 
 
-                    var entrar = Intent (this , telaUsuario::class.java)
+                    var entrar = Intent (this , telaPrincipal::class.java)
                     startActivity(entrar)
 
             }
