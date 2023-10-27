@@ -49,7 +49,6 @@ class frmCadastro : AppCompatActivity() {
             }
             else
                 {
-
                     auth.createUserWithEmailAndPassword(email,senha).addOnCompleteListener{ cadastro ->
                         if (cadastro.isSuccessful){
                             val avisoSucesso = Snackbar.make(view, "cadastrado com sucesso", Snackbar.LENGTH_SHORT)

@@ -55,7 +55,7 @@ class frmLogin : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(email, senha).addOnCompleteListener{autenticacao ->
                     if (autenticacao.isSuccessful){
                         irPraTelaHome()
-
+                        finish()
                     }
                 }.addOnFailureListener {exception ->
                     val msgErro = when(exception){
