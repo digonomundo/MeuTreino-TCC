@@ -5,80 +5,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/cinzaClaro"
     tools:context=".view.telaprincipal.ui.montagemTreinos.MontagemTreinosFragment">
 
         <LinearLayout
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <ImageView
+                    android:layout_marginStart="10dp"
                     android:id="@+id/imageView"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
                     app:srcCompat="@drawable/img_supino" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/txtTitulo1"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="30dp"
                         android:text="@string/supino_reto"
-                        android:textColor="@color/red"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
 
                     <TextView
                         android:id="@+id/txtDesc1"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="20dp"
-                        android:textColor="@color/yellow"
                         android:text="@string/com_barra_livre"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/roxo"
+                        android:textSize="13dp" />
                 </LinearLayout>
+
                 <Switch
                     android:id="@+id/switch1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    />
+
             </LinearLayout>
 
-
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/supinoinclinado"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -87,9 +95,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
                         android:layout_weight="1"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
                         android:text="@string/supino_inclinado"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -97,37 +105,42 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:text="@string/com_barra_livre"
-                        android:textColor="@color/yellow"
-                        android:textAlignment="center" />
+                        android:textColor="@color/roxo"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
 
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/supinodeclinado" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -135,9 +148,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
                         android:text="@string/supino_declinado"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -145,37 +158,42 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:text="@string/com_barra_livre"
-                        android:textColor="@color/yellow"
-                        android:textAlignment="center" />
+                        android:textColor="@color/roxo"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
 
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/supinoretocomhalter" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -183,9 +201,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="30dp"
+                        android:textSize="25dp"
                         android:text="@string/supino_reto"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -195,34 +213,39 @@
                         android:layout_margin="0dp"
                         android:text="@string/com_halteres"
                         android:textAlignment="center"
-                        android:textColor="@color/yellow"
-                        android:textSize="20dp" />
+                        android:layout_gravity="center"
+                        android:textColor="@color/roxo"
+                        android:textSize="13dp" />
 
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch4"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/supinoinclinadocomhalter" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -230,9 +253,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
                         android:text="@string/supino_inclinado"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -240,36 +263,41 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:text="@string/com_halteres"
-                        android:textColor="@color/yellow"
-                        android:textAlignment="center" />
+                        android:textColor="@color/roxo"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/supinodeclinadocomhalter" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -277,9 +305,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
                         android:text="@string/supino_declinado"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -287,36 +315,41 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:text="@string/com_halteres"
-                        android:textColor="@color/yellow"
-                        android:textAlignment="center" />
+                        android:textColor="@color/roxo"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView7"
                     android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_height="220dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/supinonabarraguiada" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -324,9 +357,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="20dp"
+                        android:textSize="25dp"
                         android:text="@string/supino_reto"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -334,36 +367,41 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:text="@string/com_barra_guiada"
-                        android:textColor="@color/yellow"
-                        android:textAlignment="center" />
+                        android:textColor="@color/roxo"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView8"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/supinoinclinadonabarraguiada" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -371,9 +409,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
                         android:text="@string/supino_inclinado"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -381,36 +419,41 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:text="@string/com_barra_guiada"
-                        android:textColor="@color/yellow"
-                        android:textAlignment="center" />
+                        android:textColor="@color/roxo"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch8"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView9"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/crucifixosentadonamaquina" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -418,9 +461,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="20dp"
+                        android:textSize="16dp"
                         android:text="@string/crucifixo_sentado"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -428,35 +471,40 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:text="@string/na_maquina"
-                        android:textColor="@color/yellow"
-                        android:textAlignment="center" />
+                        android:textColor="@color/roxo"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch9"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView10"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/crucifixocomhalter" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -464,9 +512,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
                         android:text="@string/crucifixo_reto"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -474,36 +522,41 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:text="@string/com_halteres"
-                        android:textColor="@color/yellow"
-                        android:textAlignment="center" />
+                        android:textColor="@color/roxo"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch10"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView11"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/crucifixoinclinadocomhalter" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -511,9 +564,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="20dp"
+                        android:textSize="16dp"
                         android:text="@string/crucifixo_inclinado"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -521,36 +574,41 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:text="@string/com_halteres"
-                        android:textColor="@color/yellow"
-                        android:textAlignment="center" />
+                        android:textColor="@color/roxo"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch11"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/divisao_partes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                >
 
                 <ImageView
                     android:id="@+id/imageView12"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_margin="0dp"
+                    android:layout_marginStart="10dp"
                     app:srcCompat="@drawable/crucifixoarticuladonamaquina" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -558,9 +616,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="20dp"
+                        android:textSize="16dp"
                         android:text="@string/crucifixo_articulado"
-                        android:textColor="@color/red"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -568,15 +626,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="0dp"
-                        android:textSize="15dp"
+                        android:textSize="13dp"
                         android:text="@string/na_maquina"
-                        android:textColor="@color/yellow"
-                        android:textAlignment="center" />
+                        android:textColor="@color/roxo"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
                 </LinearLayout>
                 <Switch
                     android:id="@+id/switch12"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
             </LinearLayout>
 
         </LinearLayout>

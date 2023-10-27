@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.vamostcc.databinding.FragmentTelaUsuarioBinding
 import com.example.vamostcc.view.frmlogin.frmLogin
+import com.example.vamostcc.view.home.home
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
@@ -38,6 +39,7 @@ class TelaUsuarioFragment : Fragment() {
         val idUsuario = FirebaseAuth.getInstance().currentUser!!.uid
         val ref = db.collection("usuarios").document(idUsuario)
 
+
         ref.get().addOnSuccessListener { document ->
             if (document != null) {
                 val nome = document["nome"].toString()
@@ -58,28 +60,28 @@ class TelaUsuarioFragment : Fragment() {
                 binding.txtImc.text = imcFormatado
                 binding.txtQtdAgua.text = "$aguaFormatada litros"
 
-                if (imc < 18.5) {
+                if (imc < 18.49) {
                     binding.txtResultadoImc.setText("você está Abaixo do peso")
                     binding.txtResultadoImc.setTextColor(Color.RED)
                 }
-                else if (imc >= 18.5 && imc < 24.9) {
+                else if (imc >= 18.50 && imc < 24.99) {
                     binding.txtResultadoImc.setText("você está com o peso Saudável")
                     binding.txtResultadoImc.setTextColor(Color.GREEN)
                 }
-                else if (imc >= 25.0 && imc < 29.9) {
+                else if (imc >= 25.00 && imc < 29.99) {
                     binding.txtResultadoImc.setText("você está Sobrepeso")
                     binding.txtResultadoImc.setTextColor(Color.YELLOW)
                 }
-                else if (imc >= 30.0 && imc < 34.9) {
-                    binding.txtResultadoImc.setText("você está começando a virar a Thais Carla")
+                else if (imc >= 30.00 && imc < 34.99) {
+                    binding.txtResultadoImc.setText("você está em obesidade grau I")
                     binding.txtResultadoImc.setTextColor(Color.RED)
                 }
-                else if (imc >= 35.0 && imc < 39.9) {
-                    binding.txtResultadoImc.setText("você virou a Thais Carla")
+                else if (imc >= 35.00 && imc < 39.99) {
+                    binding.txtResultadoImc.setText("você está em obesidade grau II")
                     binding.txtResultadoImc.setTextColor(Color.RED)
                 }
-                else {
-                    binding.txtResultadoImc.setText("você está pior que a Thais Carla")
+                else if (imc >= 40.00){
+                    binding.txtResultadoImc.setText("você está em Obesidade Mórbida")
                     binding.txtResultadoImc.setTextColor(Color.RED)
                 }
             }
@@ -98,6 +100,12 @@ class TelaUsuarioFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun reCadastro(){
+        val intent = Intent(activity, home::class.java)
+        startActivity(intent)
+        activity?.finish()
     }
 
     private fun calcularIMC(peso: Double, altura: Double): Double {

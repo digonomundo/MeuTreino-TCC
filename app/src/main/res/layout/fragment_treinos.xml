@@ -5,20 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/cinzaClaro"
     tools:context=".view.telaprincipal.ui.treinos.TreinosFragment">
 
     <LinearLayout
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/linear1"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             android:layout_marginTop="5dp">
 
@@ -26,7 +26,7 @@
                 android:id="@+id/imageView1"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_margin="0dp"
+                android:layout_marginStart="10dp"
                 />
 
             <LinearLayout
@@ -41,7 +41,6 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="30dp"
-                    android:textColor="@color/red"
                     android:textAlignment="center" />
 
                 <TextView
@@ -50,7 +49,6 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="20dp"
-                    android:textColor="@color/yellow"
                     android:text=""
                     android:textAlignment="center" />
             </LinearLayout>
@@ -58,17 +56,18 @@
 
         <LinearLayout
             android:id="@+id/linear2"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_margin="0dp"
+                android:layout_marginStart="10dp"
                 />
 
             <LinearLayout
@@ -82,9 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:layout_weight="1"
                     android:textSize="30dp"
-                    android:textColor="@color/red"
                     android:textAlignment="center" />
 
                 <TextView
@@ -94,7 +91,6 @@
                     android:layout_margin="0dp"
                     android:textSize="20dp"
                     android:text=""
-                    android:textColor="@color/yellow"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
@@ -102,18 +98,19 @@
 
         <LinearLayout
             android:id="@+id/linear3"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_margin="0dp"
-               />
+                android:layout_marginStart="10dp"
+                />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -126,9 +123,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="30dp"
-                    android:text=""
-                    android:textColor="@color/red"
+                    android:textSize="20dp"
                     android:textAlignment="center" />
 
                 <TextView
@@ -138,19 +133,18 @@
                     android:layout_margin="0dp"
                     android:textSize="20dp"
                     android:text=""
-                    android:textColor="@color/yellow"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
 
-
         <LinearLayout
             android:id="@+id/linear4"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -171,8 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="30dp"
-                    android:text=" "
-                    android:textColor="@color/red"
+                    android:text=""
                     android:textAlignment="center" />
 
                 <TextView
@@ -182,18 +175,18 @@
                     android:layout_margin="0dp"
                     android:text=" "
                     android:textAlignment="center"
-                    android:textColor="@color/yellow"
                     android:textSize="20dp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linear5"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -214,8 +207,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:textSize="30dp"
-                    android:text=" "
-                    android:textColor="@color/red"
+                    android:text=""
                     android:textAlignment="center" />
 
                 <TextView
@@ -225,7 +217,6 @@
                     android:layout_margin="0dp"
                     android:textSize="20dp"
                     android:text=" "
-                    android:textColor="@color/yellow"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
@@ -233,11 +224,12 @@
 
         <LinearLayout
             android:id="@+id/linear6"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -259,7 +251,6 @@
                     android:layout_margin="0dp"
                     android:textSize="30dp"
                     android:text=" "
-                    android:textColor="@color/red"
                     android:textAlignment="center" />
 
                 <TextView
@@ -269,7 +260,6 @@
                     android:layout_margin="0dp"
                     android:textSize="20dp"
                     android:text=" "
-                    android:textColor="@color/yellow"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
@@ -277,11 +267,12 @@
 
         <LinearLayout
             android:id="@+id/linear7"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -303,7 +294,6 @@
                     android:layout_margin="0dp"
                     android:textSize="30dp"
                     android:text=" "
-                    android:textColor="@color/red"
                     android:textAlignment="center" />
 
                 <TextView
@@ -313,7 +303,6 @@
                     android:layout_margin="0dp"
                     android:textSize="20dp"
                     android:text=" "
-                    android:textColor="@color/yellow"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
@@ -321,11 +310,12 @@
 
         <LinearLayout
             android:id="@+id/linear8"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -347,7 +337,6 @@
                     android:layout_margin="0dp"
                     android:textSize="30dp"
                     android:text=" "
-                    android:textColor="@color/red"
                     android:textAlignment="center" />
 
                 <TextView
@@ -357,7 +346,6 @@
                     android:layout_margin="0dp"
                     android:textSize="20dp"
                     android:text=" "
-                    android:textColor="@color/yellow"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
@@ -365,11 +353,12 @@
 
         <LinearLayout
             android:id="@+id/linear9"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -391,7 +380,6 @@
                     android:layout_margin="0dp"
                     android:textSize="30dp"
                     android:text=" "
-                    android:textColor="@color/red"
                     android:textAlignment="center" />
 
                 <TextView
@@ -401,7 +389,6 @@
                     android:layout_margin="0dp"
                     android:textSize="20dp"
                     android:text=" "
-                    android:textColor="@color/yellow"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
@@ -409,11 +396,12 @@
 
         <LinearLayout
             android:id="@+id/linear10"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView10"
@@ -435,7 +423,6 @@
                     android:layout_margin="0dp"
                     android:textSize="30dp"
                     android:text=" "
-                    android:textColor="@color/red"
                     android:textAlignment="center" />
 
                 <TextView
@@ -445,18 +432,18 @@
                     android:layout_margin="0dp"
                     android:textSize="20dp"
                     android:text=" "
-                    android:textColor="@color/yellow"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linear11"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView11"
@@ -478,7 +465,6 @@
                     android:layout_margin="0dp"
                     android:textSize="30dp"
                     android:text=" "
-                    android:textColor="@color/red"
                     android:textAlignment="center" />
 
                 <TextView
@@ -488,18 +474,18 @@
                     android:layout_margin="0dp"
                     android:textSize="20dp"
                     android:text=" "
-                    android:textColor="@color/yellow"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linear12"
-            android:layout_width="wrap_content"
+            android:background="@drawable/divisao_partes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/imageView12"
@@ -521,7 +507,6 @@
                     android:layout_margin="0dp"
                     android:textSize="30dp"
                     android:text=" "
-                    android:textColor="@color/red"
                     android:textAlignment="center" />
 
                 <TextView
@@ -531,7 +516,6 @@
                     android:layout_margin="0dp"
                     android:textSize="20dp"
                     android:text=" "
-                    android:textColor="@color/yellow"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>

@@ -37,6 +37,8 @@ class TreinosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
         val Linearlayout1 : LinearLayout = binding.linear1
         Linearlayout1.visibility = View.INVISIBLE
 
@@ -97,7 +99,7 @@ class TreinosFragment : Fragment() {
                     binding.txtTitulo1.text = "Supino Reto"
                     binding.txtTitulo1.setTextColor(Color.BLACK)
                     binding.txtDesc1.setText("Com Barra Livre")
-                    binding.txtDesc1.setTextColor(Color.RED)
+                    binding.txtDesc1.setTextColor(Color.MAGENTA)
                     binding.imageView1.setImageDrawable(imgSupino)
                 } else {
                     val linearLayout1 = binding.linear1
@@ -119,7 +121,7 @@ class TreinosFragment : Fragment() {
                     binding.txtTitulo2.text = "Supino Inclinado"
                     binding.txtTitulo2.setTextColor(Color.BLACK)
                     binding.txtDesc2.setText("Com barra livre")
-                    binding.txtDesc2.setTextColor(Color.RED)
+                    binding.txtDesc2.setTextColor(Color.MAGENTA)
                     binding.imageView2.setImageDrawable(imgSupinoInclinado)
                 } else {
                     val linearLayout2 = binding.linear2
@@ -142,7 +144,7 @@ class TreinosFragment : Fragment() {
                     binding.txtTitulo3.setText("Supino Declinado")
                     binding.txtTitulo3.setTextColor(Color.BLACK)
                     binding.txtDesc3.setText("Com barra livre")
-                    binding.txtDesc3.setTextColor(Color.RED)
+                    binding.txtDesc3.setTextColor(Color.MAGENTA)
                     binding.imageView3.setImageDrawable(imgSupinoDeclinado)
                 } else {
                     val linearLayout3 = binding.linear3
@@ -166,7 +168,7 @@ class TreinosFragment : Fragment() {
                     binding.txtTitulo4.text = "Supino Reto"
                     binding.txtTitulo4.setTextColor(Color.BLACK)
                     binding.txtDesc4.setText("Com Halteres")
-                    binding.txtDesc4.setTextColor(Color.RED)
+                    binding.txtDesc4.setTextColor(Color.MAGENTA)
                     binding.imageView4.setImageDrawable(imgSupinoRetoComHalter)
                 } else {
                     val linearLayout4 = binding.linear4
@@ -174,7 +176,7 @@ class TreinosFragment : Fragment() {
                     val params4 = linearLayout4.layoutParams
                     params4.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout4.layoutParams = params4
-                    binding.txtTitulo3.text = ""
+                    binding.txtTitulo4.text = ""
                 }
 
 

@@ -25,8 +25,7 @@ tools:context=".view.frmlogin.frmLogin">
     android:layout_marginStart="40dp"
     android:layout_marginTop="20dp"
     android:layout_marginEnd="40dp"
-
-    android:background="@color/white"
+    android:background="@drawable/edt_circular"
     android:drawableLeft="@drawable/baseline_email_24"
     android:hint="  Email"
     android:inputType="textEmailAddress"
@@ -41,15 +40,14 @@ tools:context=".view.frmlogin.frmLogin">
     android:layout_marginStart="40dp"
     android:layout_marginTop="20dp"
     android:layout_marginEnd="40dp"
-
-    android:background="@color/white"
+    android:background="@drawable/edt_circular"
     android:drawableLeft="@drawable/baseline_lock_24"
     android:hint="  Senha"
     android:inputType="textPassword"
     android:maxLines="1"
     android:padding="15dp" />
 
-<Button
+<androidx.appcompat.widget.AppCompatButton
     android:id="@+id/btnEntrar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -61,6 +59,7 @@ tools:context=".view.frmlogin.frmLogin">
     android:layout_marginStart="100dp"
     android:layout_marginEnd="100dp"
     android:backgroundTint="@color/cinza"
+    android:background="@drawable/botao_redondo"
     android:layout_marginBottom="20dp"
 
     />
