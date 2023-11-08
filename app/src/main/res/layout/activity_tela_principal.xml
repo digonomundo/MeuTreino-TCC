@@ -9,11 +9,38 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <include
-        android:id="@+id/app_bar_tela_principal"
-        layout="@layout/app_bar_tela_principal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/app_bar_tela_principal"
+            layout="@layout/app_bar_tela_principal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBottomNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="30dp"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="5dp"
+            android:translationZ="10dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigation"
+                app:menu="@menu/activity_tela_principal_drawer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                app:backgroundTint="@color/cinza"
+                app:itemIconTint="@color/color_bottom_nav"
+                app:itemTextColor="@color/color_bottom_nav"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -23,4 +50,5 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_tela_principal"
         app:menu="@menu/activity_tela_principal_drawer" />
+
 </androidx.drawerlayout.widget.DrawerLayout>

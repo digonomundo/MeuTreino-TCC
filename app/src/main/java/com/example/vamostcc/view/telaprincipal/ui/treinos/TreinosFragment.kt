@@ -107,7 +107,6 @@ class TreinosFragment : Fragment() {
                     val params1 = linearLayout1.layoutParams
                     params1.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout1.layoutParams = params1
-                    binding.txtTitulo1.text = ""
                 }
 
                 if (supinoInclinadoComBarraLivre == "Selecionado") {
@@ -129,7 +128,6 @@ class TreinosFragment : Fragment() {
                     val params2 = linearLayout2.layoutParams
                     params2.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout2.layoutParams = params2
-                    binding.txtTitulo2.text = ""
                 }
 
 
@@ -152,7 +150,6 @@ class TreinosFragment : Fragment() {
                     val params3 = linearLayout3.layoutParams
                     params3.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout3.layoutParams = params3
-                    binding.txtTitulo3.text = ""
                 }
 
 
@@ -176,7 +173,6 @@ class TreinosFragment : Fragment() {
                     val params4 = linearLayout4.layoutParams
                     params4.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout4.layoutParams = params4
-                    binding.txtTitulo4.text = ""
                 }
 
 
@@ -200,7 +196,6 @@ class TreinosFragment : Fragment() {
                     val params5 = linearLayout5.layoutParams
                     params5.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout5.layoutParams = params5
-                    binding.txtTitulo5.text = ""
                 }
 
 
@@ -224,7 +219,6 @@ class TreinosFragment : Fragment() {
                     val params6 = linearLayout6.layoutParams
                     params6.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout6.layoutParams = params6
-                    binding.txtTitulo6.text = ""
                 }
 
 
@@ -248,7 +242,6 @@ class TreinosFragment : Fragment() {
                     val params7 = linearLayout7.layoutParams
                     params7.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout7.layoutParams = params7
-                    binding.txtTitulo7.text = ""
                 }
 
 
@@ -272,7 +265,6 @@ class TreinosFragment : Fragment() {
                     val params8 = linearLayout8.layoutParams
                     params8.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout8.layoutParams = params8
-                    binding.txtTitulo8.text = ""
                 }
 
 
@@ -296,7 +288,6 @@ class TreinosFragment : Fragment() {
                     val params9 = linearLayout9.layoutParams
                     params9.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout9.layoutParams = params9
-                    binding.txtTitulo9.text = ""
                 }
 
 
@@ -320,7 +311,6 @@ class TreinosFragment : Fragment() {
                     val params10 = linearLayout10.layoutParams
                     params10.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout10.layoutParams = params10
-                    binding.txtTitulo10.text = ""
                 }
 
 
@@ -344,7 +334,6 @@ class TreinosFragment : Fragment() {
                     val params11 = linearLayout11.layoutParams
                     params11.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout11.layoutParams = params11
-                    binding.txtTitulo11.text = ""
                 }
 
 
@@ -368,7 +357,6 @@ class TreinosFragment : Fragment() {
                     val params12 = linearLayout12.layoutParams
                     params12.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout12.layoutParams = params12
-                    binding.txtTitulo12.text = ""
                 }
 
 

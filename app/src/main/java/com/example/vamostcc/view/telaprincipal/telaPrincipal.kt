@@ -14,7 +14,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.vamostcc.R
 import com.example.vamostcc.databinding.ActivityTelaPrincipalBinding
+import com.example.vamostcc.view.home.home
 import com.example.vamostcc.view.telaprincipal.ui.home.HomeFragment
+import com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.MontagemTreinosFragment
+import com.example.vamostcc.view.telaprincipal.ui.perfilusuario.TelaUsuarioFragment
+import com.example.vamostcc.view.telaprincipal.ui.treinos.TreinosFragment
 
 
 class telaPrincipal : AppCompatActivity() {
@@ -44,6 +48,20 @@ class telaPrincipal : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        substFragm(HomeFragment())
+
+        binding.bottomNavigation.setOnItemSelectedListener {
+            when (it.itemId){
+                R.id.nav_home -> substFragm(HomeFragment())
+                R.id.nav_treinos -> substFragm(TreinosFragment())
+                R.id.nav_montagem_treinos -> substFragm(MontagemTreinosFragment())
+                R.id.nav_telaUsuario -> substFragm(TelaUsuarioFragment())
+                else -> {
+                    substFragm(HomeFragment())
+                }
+            }
+            true
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
