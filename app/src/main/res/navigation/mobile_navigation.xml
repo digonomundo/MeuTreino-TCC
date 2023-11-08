@@ -29,7 +29,4 @@
         android:label="@string/menu_perfil_usuario"
         tools:layout="@layout/fragment_tela_usuario" />
 
-
-
-
 </navigation>

@@ -11,8 +11,10 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.vamostcc.R
 import com.example.vamostcc.databinding.ActivityTelaPrincipalBinding
+import com.example.vamostcc.view.telaprincipal.ui.home.HomeFragment
 
 
 class telaPrincipal : AppCompatActivity() {
@@ -41,6 +43,7 @@ class telaPrincipal : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -53,4 +56,12 @@ class telaPrincipal : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_tela_principal)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+    private fun substFragm (fragment: Fragment) {
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout,  fragment)
+        fragmentTransaction.commit()
+    }
+
 }
