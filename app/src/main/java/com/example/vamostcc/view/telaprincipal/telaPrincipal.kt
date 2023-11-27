@@ -1,7 +1,11 @@
 package com.example.vamostcc.view.telaprincipal
 
 import android.os.Bundle
+import android.view.Gravity
 import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.LinearLayout
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -11,6 +15,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.example.vamostcc.R
 import com.example.vamostcc.databinding.ActivityTelaPrincipalBinding
@@ -34,7 +39,6 @@ class telaPrincipal : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarTelaPrincipal.toolbar)
 
-
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_tela_principal)
@@ -42,26 +46,14 @@ class telaPrincipal : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_treinos, R.id.nav_telaUsuario,R.id.nav_montagem_treinos
+                R.id.nav_home, R.id.nav_telaUsuario
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        substFragm(HomeFragment())
+        //NAVIGATION BUTTOM
 
-        binding.bottomNavigation.setOnItemSelectedListener {
-            when (it.itemId){
-                R.id.nav_home -> substFragm(HomeFragment())
-                R.id.nav_treinos -> substFragm(TreinosFragment())
-                R.id.nav_montagem_treinos -> substFragm(MontagemTreinosFragment())
-                R.id.nav_telaUsuario -> substFragm(TelaUsuarioFragment())
-                else -> {
-                    substFragm(HomeFragment())
-                }
-            }
-            true
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -75,11 +67,10 @@ class telaPrincipal : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    private fun substFragm (fragment: Fragment) {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,  fragment)
-        fragmentTransaction.commit()
-    }
+    /*fun esconderNavigationButton(): Boolean {
+        val cardbutton : CardView = binding.cardBottomNav
+        cardbutton.visibility = View.INVISIBLE
+        return true
+    }*/
 
 }

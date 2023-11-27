@@ -3,6 +3,7 @@ package com.example.vamostcc.view.telaprincipal.ui.perfilusuario
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.renderscript.ScriptGroup.Binding
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,12 +12,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.vamostcc.databinding.FragmentTelaUsuarioBinding
+import com.example.vamostcc.databinding.ActivityTelaPrincipalBinding
 import com.example.vamostcc.view.frmlogin.frmLogin
 import com.example.vamostcc.view.home.home
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
-
 
 class TelaUsuarioFragment : Fragment() {
     private var _binding: FragmentTelaUsuarioBinding? = null
@@ -24,6 +25,7 @@ class TelaUsuarioFragment : Fragment() {
 
     private val auth = FirebaseAuth.getInstance()
     private var db = FirebaseFirestore.getInstance()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,6 +40,8 @@ class TelaUsuarioFragment : Fragment() {
 
         val idUsuario = FirebaseAuth.getInstance().currentUser!!.uid
         val ref = db.collection("usuarios").document(idUsuario)
+
+
 
 
         ref.get().addOnSuccessListener { document ->
@@ -116,6 +120,7 @@ class TelaUsuarioFragment : Fragment() {
         return String.format(Locale("pt", "BR"), "%.2f", imc)
     }
 
+
     private fun calcularAgua(peso: Double): Double {
         return (peso * 35) / 1000
     }
@@ -123,4 +128,5 @@ class TelaUsuarioFragment : Fragment() {
     private fun formatarAgua(agua: Double): String {
         return String.format(Locale("pt", "BR"), "%.2f", agua)
     }
+
 }

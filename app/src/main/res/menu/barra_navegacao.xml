@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="@string/menu_home" />
 
+    <item
+        android:id="@+id/treinos"
+        android:icon="@drawable/imgtreinos2"
+        android:title="@string/menu_treinos" />
+
+    <item
+        android:id="@+id/montagem_treinos"
+        android:icon="@drawable/imgtreinos"
+        android:title="@string/menu_montagem_treinos" />
 
 </menu>

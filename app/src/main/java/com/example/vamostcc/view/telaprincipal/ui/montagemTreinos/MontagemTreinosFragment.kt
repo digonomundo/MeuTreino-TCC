@@ -14,6 +14,7 @@ import android.graphics.Color
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.lifecycle.ViewModelProvider
 import com.example.vamostcc.view.frmlogin.frmLogin
 import com.google.firebase.auth.FirebaseAuth
@@ -554,6 +555,7 @@ class MontagemTreinosFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
     }
 }
 
