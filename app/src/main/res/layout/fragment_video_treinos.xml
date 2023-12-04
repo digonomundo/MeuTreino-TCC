@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/roxo"
     tools:context=".view.telaprincipal.ui.video.videoTreinos">
 
 
      <LinearLayout
          android:layout_width="match_parent"
-         android:layout_height="match_parent"
+         android:layout_height="wrap_content"
          android:orientation="vertical">
 
     <VideoView
@@ -18,13 +19,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <TextView
+        android:id="@+id/txtDescVideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        android:text="testando era uma vez um pinrinho de uma perna só que foi ciscar e caiu"/>
+        android:text=" "/>
 
-    </LinearLayout>
+    </ScrollView>
 
-    </RelativeLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>

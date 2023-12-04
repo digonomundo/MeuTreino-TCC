@@ -24,5 +24,10 @@
             android:id="@+id/nav_montagem_treinos"
             android:icon="@drawable/imgtreinos"
             android:title="@string/menu_montagem_treinos" />
+
+        <item
+            android:id="@+id/nav_desenvolvedores"
+            android:icon="@drawable/baseline_dev"
+            android:title="@string/menu_desenvolvedores" />
     </group>
 </menu>

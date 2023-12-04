@@ -25,7 +25,6 @@ class frmCadastro : AppCompatActivity() {
     private var db = FirebaseFirestore.getInstance()
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFrmCadastroBinding.inflate(layoutInflater)
@@ -36,7 +35,6 @@ class frmCadastro : AppCompatActivity() {
 
             val email = binding.edtEmail.text.toString()
             val senha = binding.edtSenha.text.toString()
-
 
 
             if (email.isEmpty() || senha.isEmpty() ) {
@@ -81,6 +79,7 @@ class frmCadastro : AppCompatActivity() {
                     }
 
                 }
+
         }
 
 

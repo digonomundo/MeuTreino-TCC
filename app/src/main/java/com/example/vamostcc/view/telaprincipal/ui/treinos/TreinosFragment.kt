@@ -203,6 +203,25 @@ class TreinosFragment : Fragment() {
                     linearLayout3.layoutParams = params3
                 }
 
+                binding.linear3.setOnClickListener(){
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video3")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
+                }
+
 
 
                 if (supinoRetoComHalter == "Selecionado") {
@@ -224,6 +243,26 @@ class TreinosFragment : Fragment() {
                     val params4 = linearLayout4.layoutParams
                     params4.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout4.layoutParams = params4
+                }
+
+                binding.linear4.setOnClickListener(){
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video4")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
                 }
 
 
@@ -249,6 +288,26 @@ class TreinosFragment : Fragment() {
                     linearLayout5.layoutParams = params5
                 }
 
+                binding.linear5.setOnClickListener(){
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video5")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
+                }
+
 
 
                 if (supinoDeclinadoComHalter == "Selecionado") {
@@ -270,6 +329,26 @@ class TreinosFragment : Fragment() {
                     val params6 = linearLayout6.layoutParams
                     params6.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout6.layoutParams = params6
+                }
+
+                binding.linear6.setOnClickListener(){
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video6")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
                 }
 
 
@@ -295,6 +374,26 @@ class TreinosFragment : Fragment() {
                     linearLayout7.layoutParams = params7
                 }
 
+                binding.linear7.setOnClickListener(){
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video7")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
+                }
+
 
 
                 if (supinoInclinadoComBarraGuiada == "Selecionado") {
@@ -316,6 +415,26 @@ class TreinosFragment : Fragment() {
                     val params8 = linearLayout8.layoutParams
                     params8.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout8.layoutParams = params8
+                }
+
+                binding.linear8.setOnClickListener(){
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video8")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
                 }
 
 
@@ -341,6 +460,26 @@ class TreinosFragment : Fragment() {
                     linearLayout9.layoutParams = params9
                 }
 
+                binding.linear9.setOnClickListener(){
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video9")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
+                }
+
 
 
                 if (crucifixoRetoComHalter == "Selecionado") {
@@ -362,6 +501,26 @@ class TreinosFragment : Fragment() {
                     val params10 = linearLayout10.layoutParams
                     params10.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout10.layoutParams = params10
+                }
+
+                binding.linear10.setOnClickListener(){
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video10")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
                 }
 
 
@@ -387,6 +546,26 @@ class TreinosFragment : Fragment() {
                     linearLayout11.layoutParams = params11
                 }
 
+                binding.linear11.setOnClickListener(){
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video11")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
+                }
+
 
 
                 if (crucifixoArticuladoNaMaquina == "Selecionado") {
@@ -408,6 +587,26 @@ class TreinosFragment : Fragment() {
                     val params12 = linearLayout12.layoutParams
                     params12.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout12.layoutParams = params12
+                }
+
+                binding.linear12.setOnClickListener(){
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video12")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
                 }
 
 

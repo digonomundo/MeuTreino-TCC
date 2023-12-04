@@ -17,6 +17,10 @@
     <string name="menu_perfil_usuario">Perfil De Usuario</string>
     <string name="menu_montagem_treinos">Montagem De Treinos</string>
     <string name="menu_tela_video">Vídeo do seu treino</string>
+    <string name="menu_desenvolvedores">Desenvolvedores</string>
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

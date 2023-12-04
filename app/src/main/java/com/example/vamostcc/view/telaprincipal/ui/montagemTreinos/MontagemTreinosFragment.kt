@@ -80,438 +80,370 @@ class MontagemTreinosFragment : Fragment() {
         }
 
 
+
         binding?.switch2?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'supinoInclinadoComBarraLivre'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'supinoInclinadoComBarraLivre' já existe no documento
-                    if (document.contains("supinoInclinadoComBarraLivre")) {
-                        // Atualiza o campo 'supinoInclinadoComBarraLivre' com o novo valor
-                        documentReference.update("supinoInclinadoComBarraLivre", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoInclinadoComBarraLivre' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'supinoInclinadoComBarraLivre'", e)
-                            }
-                    } else {
-                        // Cria o campo 'supinoInclinadoComBarraLivre' e define seu valor
-                        documentReference.update("supinoInclinadoComBarraLivre", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoInclinadoComBarraLivre' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'supinoInclinadoComBarraLivre'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("supinoInclinadoComBarraLivre", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'supinoInclinadoComBarraLivre' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'supinoInclinadoComBarraLivre'", e)
+                }
         }
 
+        // Recuperar o valor do campo 'supinoInclinadoComBarraLivre' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+
+            if (document != null && document.exists()) {
+
+                // Verificar se o campo 'supinoInclinadoComBarraLivre' existe no documento
+                if (document.contains("supinoRetoComBarraLivre")) {
+                    val valorCampo = document.getString("supinoInclinadoComBarraLivre")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch2?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
 
 
         binding?.switch3?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'supinoDeclinadoComBarraLivre'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'supinoDeclinadoComBarraLivre' já existe no documento
-                    if (document.contains("supinoDeclinadoComBarraLivre")) {
-                        // Atualiza o campo 'supinoDeclinadoComBarraLivre' com o novo valor
-                        documentReference.update("supinoDeclinadoComBarraLivre", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoDeclinadoComBarraLivre' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'supinoDeclinadoComBarraLivre'", e)
-                            }
-                    } else {
-                        // Cria o campo 'supinoDeclinadoComBarraLivre' e define seu valor
-                        documentReference.update("supinoDeclinadoComBarraLivre", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoDeclinadoComBarraLivre' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'supinoDeclinadoComBarraLivre'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("supinoDeclinadoComBarraLivre", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'supinoDeclinadoComBarraLivre' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'supinoDeclinadoComBarraLivre'", e)
+                }
         }
 
+        // Recuperar o valor do campo 'supinoDeclinadoComBarraLivre' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+
+            if (document != null && document.exists()) {
+
+                // Verificar se o campo 'supinoDeclinadoComBarraLivre' existe no documento
+                if (document.contains("supinoDeclinadoComBarraLivre")) {
+                    val valorCampo = document.getString("supinoDeclinadoComBarraLivre")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch3?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
 
 
         binding?.switch4?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'supinoRetoComHalter'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'supinoRetoComHalter' já existe no documento
-                    if (document.contains("supinoRetoComHalter")) {
-                        // Atualiza o campo 'supinoRetoComHalter' com o novo valor
-                        documentReference.update("supinoRetoComHalter", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoRetoComHalter' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'supinoRetoComHalter'", e)
-                            }
-                    } else {
-                        // Cria o campo 'supinoRetoComHalter' e define seu valor
-                        documentReference.update("supinoRetoComHalter", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoRetoComHalter' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'supinoRetoComHalter'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("supinoRetoComHalter", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'supinoRetoComHalter' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'supinoRetoComHalter'", e)
+                }
         }
+
+        // Recuperar o valor do campo 'supinoRetoComHalter' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+
+            if (document != null && document.exists()) {
+
+                // Verificar se o campo 'supinoRetoComHalter' existe no documento
+                if (document.contains("supinoRetoComHalter")) {
+                    val valorCampo = document.getString("supinoRetoComHalter")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch4?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
+
+
 
         binding?.switch5?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'supinoInclinadoComHalter'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'supinoInclinadoComHalter' já existe no documento
-                    if (document.contains("supinoInclinadoComHalter")) {
-                        // Atualiza o campo 'supinoInclinadoComHalter' com o novo valor
-                        documentReference.update("supinoInclinadoComHalter", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoInclinadoComHalter' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'supinoInclinadoComHalter'", e)
-                            }
-                    } else {
-                        // Cria o campo 'supinoInclinadoComHalter' e define seu valor
-                        documentReference.update("supinoInclinadoComHalter", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoInclinadoComHalter' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'supinoInclinadoComHalter'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("supinoInclinadoComHalter", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'supinoInclinadoComHalter' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'supinoInclinadoComHalter'", e)
+                }
         }
+
+        // Recuperar o valor do campo 'supinoInclinadoComHalter' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+
+            if (document != null && document.exists()) {
+
+                // Verificar se o campo 'supinoInclinadoComHalter' existe no documento
+                if (document.contains("supinoInclinadoComHalter")) {
+                    val valorCampo = document.getString("supinoInclinadoComHalter")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch5?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
+
 
         binding?.switch6?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'supinoDeclinadoComHalter'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'supinoDeclinadoComHalter' já existe no documento
-                    if (document.contains("supinoDeclinadoComHalter")) {
-                        // Atualiza o campo 'supinoDeclinadoComHalter' com o novo valor
-                        documentReference.update("supinoDeclinadoComHalter", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoDeclinadoComHalter' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'supinoDeclinadoComHalter'", e)
-                            }
-                    } else {
-                        // Cria o campo 'supinoInclinadoComHalter' e define seu valor
-                        documentReference.update("supinoDeclinadoComHalter", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoDeclinadoComHalter' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'supinoDeclinadoComHalter'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("supinoDeclinadoComHalter", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'supinoDeclinadoComHalter' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'supinoDeclinadoComHalter'", e)
+                }
         }
+
+        // Recuperar o valor do campo 'supinoDeclinadoComHalter' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+
+            if (document != null && document.exists()) {
+
+                // Verificar se o campo 'supinoDeclinadoComHalter' existe no documento
+                if (document.contains("supinoDeclinadoComHalter")) {
+                    val valorCampo = document.getString("supinoDeclinadoComHalter")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch6?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
+
 
         binding?.switch7?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'supinoRetoComBarraGuiada'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'supinoRetoComBarraGuiada' já existe no documento
-                    if (document.contains("supinoRetoComBarraGuiada")) {
-                        // Atualiza o campo 'supinoRetoComBarraGuiada' com o novo valor
-                        documentReference.update("supinoRetoComBarraGuiada", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoRetoComBarraGuiada' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'supinoRetoComBarraGuiada'", e)
-                            }
-                    } else {
-                        // Cria o campo 'supinoRetoComBarraGuiada' e define seu valor
-                        documentReference.update("supinoRetoComBarraGuiada", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoRetoComBarraGuiada' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'supinoRetoComBarraGuiada'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("supinoRetoComBarraGuiada", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'supinoRetoComBarraGuiada' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'supinoRetoComBarraGuiada'", e)
+                }
         }
+
+        // Recuperar o valor do campo 'supinoRetoComBarraGuiada' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+
+            if (document != null && document.exists()) {
+
+                // Verificar se o campo 'supinoRetoComBarraGuiada' existe no documento
+                if (document.contains("supinoRetoComBarraGuiada")) {
+                    val valorCampo = document.getString("supinoDeclinadoComHalter")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch7?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
+
 
         binding?.switch8?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'supinoInclinadoComBarraGuiada'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'supinoInclinadoComBarraGuiada' já existe no documento
-                    if (document.contains("supinoInclinadoComBarraGuiada")) {
-                        // Atualiza o campo 'supinoInclinadoComBarraGuiada' com o novo valor
-                        documentReference.update("supinoInclinadoComBarraGuiada", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoInclinadoComBarraGuiada' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'supinoInclinadoComBarraGuiada'", e)
-                            }
-                    } else {
-                        // Cria o campo 'supinoInclinadoComBarraGuiada' e define seu valor
-                        documentReference.update("supinoInclinadoComBarraGuiada", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoInclinadoComBarraGuiada' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'supinoInclinadoComBarraGuiada'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("supinoInclinadoComBarraGuiada", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'supinoInclinadoComBarraGuiada' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'supinoInclinadoComBarraGuiada'", e)
+                }
         }
+
+        // Recuperar o valor do campo 'supinoInclinadoComBarraGuiada' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+            if (document != null && document.exists()) {
+                // Verificar se o campo 'supinoInclinadoComBarraGuiada' existe no documento
+                if (document.contains("supinoInclinadoComBarraGuiada")) {
+                    val valorCampo = document.getString("supinoInclinadoComBarraGuiada")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch8?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
+
 
         binding?.switch9?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'crucifixoSentadoNaMaquina'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'crucifixoSentadoNaMaquina' já existe no documento
-                    if (document.contains("crucifixoSentadoNaMaquina")) {
-                        // Atualiza o campo 'crucifixoSentadoNaMaquina' com o novo valor
-                        documentReference.update("crucifixoSentadoNaMaquina", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'crucifixoSentadoNaMaquina' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'crucifixoSentadoNaMaquina'", e)
-                            }
-                    } else {
-                        // Cria o campo 'crucifixoSentadoNaMaquina' e define seu valor
-                        documentReference.update("crucifixoSentadoNaMaquina", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'crucifixoSentadoNaMaquina' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'crucifixoSentadoNaMaquina'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("crucifixoSentadoNaMaquina", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'crucifixoSentadoNaMaquina' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'crucifixoSentadoNaMaquina'", e)
+                }
         }
+
+        // Recuperar o valor do campo 'crucifixoSentadoNaMaquina' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+            if (document != null && document.exists()) {
+                // Verificar se o campo 'crucifixoSentadoNaMaquina' existe no documento
+                if (document.contains("crucifixoSentadoNaMaquina")) {
+                    val valorCampo = document.getString("crucifixoSentadoNaMaquina")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch9?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
+
+
 
         binding?.switch10?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'crucifixoRetoComHalter'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'crucifixoRetoComHalter' já existe no documento
-                    if (document.contains("crucifixoRetoComHalter")) {
-                        // Atualiza o campo 'crucifixoRetoComHalter' com o novo valor
-                        documentReference.update("crucifixoRetoComHalter", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'crucifixoRetoComHalter' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'crucifixoRetoComHalter'", e)
-                            }
-                    } else {
-                        // Cria o campo 'crucifixoRetoComHalter' e define seu valor
-                        documentReference.update("crucifixoRetoComHalter", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'crucifixoRetoComHalter' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'crucifixoRetoComHalter'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("crucifixoRetoComHalter", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'crucifixoRetoComHalter' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'crucifixoRetoComHalter'", e)
+                }
         }
+
+        // Recuperar o valor do campo 'crucifixoRetoComHalter' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+            if (document != null && document.exists()) {
+                // Verificar se o campo 'crucifixoRetoComHalter' existe no documento
+                if (document.contains("crucifixoRetoComHalter")) {
+                    val valorCampo = document.getString("crucifixoRetoComHalter")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch10?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
+
 
         binding?.switch11?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'crucifixoInclinadoComHalter'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'crucifixoInclinadoComHalter' já existe no documento
-                    if (document.contains("crucifixoInclinadoComHalter")) {
-                        // Atualiza o campo 'crucifixoInclinadoComHalter' com o novo valor
-                        documentReference.update("crucifixoInclinadoComHalter", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'crucifixoInclinadoComHalter' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'crucifixoInclinadoComHalter'", e)
-                            }
-                    } else {
-                        // Cria o campo 'crucifixoInclinadoComHalter' e define seu valor
-                        documentReference.update("crucifixoInclinadoComHalter", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'crucifixoInclinadoComHalter' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'crucifixoInclinadoComHalter'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("crucifixoInclinadoComHalter", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'crucifixoInclinadoComHalter' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'crucifixoInclinadoComHalter'", e)
+                }
         }
 
+        // Recuperar o valor do campo 'crucifixoInclinadoComHalter' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+            if (document != null && document.exists()) {
+                // Verificar se o campo 'crucifixoInclinadoComHalter' existe no documento
+                if (document.contains("crucifixoInclinadoComHalter")) {
+                    val valorCampo = document.getString("crucifixoInclinadoComHalter")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch11?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
+        
 
         binding?.switch12?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'crucifixoArticuladoNaMaquina'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'crucifixoArticuladoNaMaquina' já existe no documento
-                    if (document.contains("crucifixoArticuladoNaMaquina")) {
-                        // Atualiza o campo 'crucifixoArticuladoNaMaquina' com o novo valor
-                        documentReference.update("crucifixoArticuladoNaMaquina", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'crucifixoArticuladoNaMaquina' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'crucifixoArticuladoNaMaquina'", e)
-                            }
-                    } else {
-                        // Cria o campo 'crucifixoArticuladoNaMaquina' e define seu valor
-                        documentReference.update("crucifixoArticuladoNaMaquina", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'crucifixoArticuladoNaMaquina' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'crucifixoArticuladoNaMaquina'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("crucifixoArticuladoNaMaquina", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'crucifixoArticuladoNaMaquina' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'crucifixoArticuladoNaMaquina'", e)
+                }
+        }
+
+        // Recuperar o valor do campo 'crucifixoArticuladoNaMaquina' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+            if (document != null && document.exists()) {
+                // Verificar se o campo 'crucifixoArticuladoNaMaquina' existe no documento
+                if (document.contains("crucifixoArticuladoNaMaquina")) {
+                    val valorCampo = document.getString("crucifixoArticuladoNaMaquina")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch12?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
             }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
         }
 
     }
