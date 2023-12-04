@@ -16,7 +16,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.example.vamostcc.view.frmlogin.frmLogin
+import com.example.vamostcc.view.telaprincipal.ui.home.HomeFragment
+import com.example.vamostcc.view.telaprincipal.ui.treinos.TreinosFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
@@ -27,6 +30,9 @@ class MontagemTreinosFragment : Fragment() {
     private val binding get() = _binding!!
 
     private var db = FirebaseFirestore.getInstance()
+
+    val idUser = FirebaseAuth.getInstance().currentUser!!.uid
+    val documentReference = db.collection("usuarios").document(idUser)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,48 +45,39 @@ class MontagemTreinosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         binding?.switch1?.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ligadoOuDesligado = if (isChecked) {
-                "Selecionado"
-            } else {
-                "Excluído"
-            }
+            // Lógica para definir o valor do campo 'supinoRetoComBarraLivre'
+            val ligadoOuDesligado = if (isChecked) {"Selecionado"} else {"Excluído"}
 
-            Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
-
-            documentReference.get().addOnSuccessListener { document ->
-                if (document != null) {
-                    // Verifica se o campo 'supinoRetoComBarraLivre' já existe no documento
-                    if (document.contains("supinoRetoComBarraLivre")) {
-                        // Atualiza o campo 'supinoRetoComBarraLivre' com o novo valor
-                        documentReference.update("supinoRetoComBarraLivre", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoRetoComBarraLivre' atualizado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao atualizar o campo 'supinoRetoComBarraLivre'", e)
-                            }
-                    } else {
-                        // Cria o campo 'supinoRetoComBarraLivre' e define seu valor
-                        documentReference.update("supinoRetoComBarraLivre", ligadoOuDesligado)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Campo 'supinoRetoComBarraLivre' criado com sucesso.")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w("Firestore", "Erro ao criar o campo 'supinoRetoComBarraLivre'", e)
-                            }
-                    }
-                } else {
-                    Log.d("Firestore", "Documento não encontrado.")
+            // Atualizar o valor do campo no Firestore
+            documentReference.update("supinoRetoComBarraLivre", ligadoOuDesligado)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Campo 'supinoRetoComBarraLivre' atualizado com sucesso.")
                 }
-            }.addOnFailureListener { exception ->
-                Log.d("Firestore", "Falha ao obter o documento.", exception)
-            }
+                .addOnFailureListener { e ->
+                    Log.w("Firestore", "Erro ao atualizar o campo 'supinoRetoComBarraLivre'", e)
+                }
         }
 
+        // Recuperar o valor do campo 'supinoRetoComBarraLivre' do Firestore
+        documentReference.get().addOnSuccessListener { document ->
+
+            if (document != null && document.exists()) {
+
+                // Verificar se o campo 'supinoRetoComBarraLivre' existe no documento
+                if (document.contains("supinoRetoComBarraLivre")) {
+                    val valorCampo = document.getString("supinoRetoComBarraLivre")
+
+                    // Definir o estado do Switch com base no valor do campo
+                    binding?.switch1?.isChecked = (valorCampo == "Selecionado")
+                }
+            } else {
+                Log.d("Firestore", "Documento não encontrado.")
+            }
+        }.addOnFailureListener { exception ->
+            Log.d("Firestore", "Falha ao obter o documento.", exception)
+        }
 
 
         binding?.switch2?.setOnCheckedChangeListener { buttonView, isChecked ->
@@ -91,9 +88,6 @@ class MontagemTreinosFragment : Fragment() {
             }
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
 
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {
@@ -136,9 +130,6 @@ class MontagemTreinosFragment : Fragment() {
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
 
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
-
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {
                     // Verifica se o campo 'supinoDeclinadoComBarraLivre' já existe no documento
@@ -180,9 +171,6 @@ class MontagemTreinosFragment : Fragment() {
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
 
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
-
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {
                     // Verifica se o campo 'supinoRetoComHalter' já existe no documento
@@ -221,9 +209,6 @@ class MontagemTreinosFragment : Fragment() {
             }
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
 
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {
@@ -264,9 +249,6 @@ class MontagemTreinosFragment : Fragment() {
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
 
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
-
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {
                     // Verifica se o campo 'supinoDeclinadoComHalter' já existe no documento
@@ -305,9 +287,6 @@ class MontagemTreinosFragment : Fragment() {
             }
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
 
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {
@@ -348,9 +327,6 @@ class MontagemTreinosFragment : Fragment() {
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
 
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
-
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {
                     // Verifica se o campo 'supinoInclinadoComBarraGuiada' já existe no documento
@@ -389,9 +365,6 @@ class MontagemTreinosFragment : Fragment() {
             }
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
 
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {
@@ -432,9 +405,6 @@ class MontagemTreinosFragment : Fragment() {
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
 
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
-
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {
                     // Verifica se o campo 'crucifixoRetoComHalter' já existe no documento
@@ -473,9 +443,6 @@ class MontagemTreinosFragment : Fragment() {
             }
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
 
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {
@@ -516,9 +483,6 @@ class MontagemTreinosFragment : Fragment() {
             }
 
             Toast.makeText(requireContext(), ligadoOuDesligado, Toast.LENGTH_SHORT).show()
-
-            val idUser = FirebaseAuth.getInstance().currentUser!!.uid
-            val documentReference = db.collection("usuarios").document(idUser)
 
             documentReference.get().addOnSuccessListener { document ->
                 if (document != null) {

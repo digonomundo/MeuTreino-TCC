@@ -15,8 +15,6 @@ class telaSplash : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-
-
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, frmLogin::class.java)
             startActivity(intent)

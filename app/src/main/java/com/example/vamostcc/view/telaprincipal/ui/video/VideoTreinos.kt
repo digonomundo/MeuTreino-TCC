@@ -23,9 +23,6 @@ class videoTreinos : Fragment() {
     private var _binding: FragmentVideoTreinosBinding? = null
     private val binding get() = _binding!!
 
-    private var videoTreinos: VideoView? = null
-    private var controle: MediaController? = null
-
     private val auth = FirebaseAuth.getInstance()
     private var db = FirebaseFirestore.getInstance()
 
@@ -40,11 +37,7 @@ class videoTreinos : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /*abrirVideo()
-
-*/
-
-
+        abrirVideo()
 
     }
 
@@ -53,21 +46,48 @@ class videoTreinos : Fragment() {
         _binding = null
     }
 
-/*
-    private fun abrirVideo(){
-        if(controle == null){
-            controle = MediaController(this.context)
-            controle!!.setAnchorView(this.videoTreinos)
+    private fun abrirVideo() {
+
+        val idUsuario = FirebaseAuth.getInstance().currentUser!!.uid
+        val ref = db.collection("usuarios").document(idUsuario)
+
+        ref.get().addOnSuccessListener { document ->
+
+            var video = document["video"].toString()
+
+            if (document != null) {
+
+                if (video == "video1" ){
+
+                    var videoView = binding.videoSelecionado
+                    var packageName = "android.resource://" + requireActivity().packageName + "/" + R.raw.videodog
+                    var uri = Uri.parse(packageName)
+
+                    videoView.setVideoURI(uri)
+
+                    var mediaController = MediaController(requireContext())
+                    videoView.setMediaController(mediaController)
+
+                } else if(video == "video2"){
+
+                    var videoView = binding.videoSelecionado
+                    var packageName = "android.resource://" + requireActivity().packageName + "/" + R.raw.videomotiva
+                    var uri = Uri.parse(packageName)
+
+                    videoView.setVideoURI(uri)
+
+                    var mediaController = MediaController(requireContext())
+                    videoView.setMediaController(mediaController)
+
+                }
+
+            }
+        }.addOnFailureListener {
+            Toast.makeText(requireContext(), "erro", Toast.LENGTH_SHORT).show()
         }
 
-        videoTreinos!!.setMediaController(MediaController)
-
-        videoTreinos!!.setVideoURI(
-            Uri.parse("android.resource://"+packageName+)
-        )
 
 
     }
-*/
 
 }

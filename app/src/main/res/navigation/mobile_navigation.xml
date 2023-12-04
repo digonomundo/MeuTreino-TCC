@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
@@ -15,7 +15,11 @@
         android:id="@+id/nav_treinos"
         android:name="com.example.vamostcc.view.telaprincipal.ui.treinos.TreinosFragment"
         android:label="@string/menu_treinos"
-        tools:layout="@layout/fragment_treinos" />
+        tools:layout="@layout/fragment_treinos" >
+        <action
+            android:id="@+id/action_nav_treinos_to_nav_tela_video"
+            app:destination="@id/nav_tela_video" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_montagem_treinos"
@@ -28,6 +32,16 @@
         android:name="com.example.vamostcc.view.telaprincipal.ui.perfilusuario.TelaUsuarioFragment"
         android:label="@string/menu_perfil_usuario"
         tools:layout="@layout/fragment_tela_usuario" />
+
+    <fragment
+        android:id="@+id/nav_tela_video"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.video.videoTreinos"
+        android:label="@string/menu_tela_video"
+        tools:layout="@layout/fragment_video_treinos" >
+        <action
+            android:id="@+id/action_nav_tela_video_to_nav_treinos"
+            app:destination="@id/nav_treinos" />
+    </fragment>
 
 
 

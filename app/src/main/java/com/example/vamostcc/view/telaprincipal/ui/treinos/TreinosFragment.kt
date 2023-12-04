@@ -1,8 +1,12 @@
 package com.example.vamostcc.view.telaprincipal.ui.treinos
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,9 +14,13 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.example.vamostcc.R
 
 import com.example.vamostcc.databinding.FragmentTreinosBinding
+import com.example.vamostcc.view.frmlogin.frmLogin
+import com.example.vamostcc.view.telaprincipal.ui.home.HomeFragment
+import com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.MontagemTreinosFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -23,6 +31,10 @@ class TreinosFragment : Fragment() {
     private val binding get() = _binding!!
 
     private var db = FirebaseFirestore.getInstance()
+
+    val idUsuario = FirebaseAuth.getInstance().currentUser!!.uid
+    val ref = db.collection("usuarios").document(idUsuario)
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,8 +48,6 @@ class TreinosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
 
         val Linearlayout1 : LinearLayout = binding.linear1
         Linearlayout1.visibility = View.INVISIBLE
@@ -70,9 +80,6 @@ class TreinosFragment : Fragment() {
         Linearlayout10.visibility = View.INVISIBLE
 
 
-        val idUsuario = FirebaseAuth.getInstance().currentUser!!.uid
-        val ref = db.collection("usuarios").document(idUsuario)
-
         ref.get().addOnSuccessListener { document ->
             if (document != null) {
                 val supinoRetoComBarraLivre = document["supinoRetoComBarraLivre"].toString()                     //1
@@ -87,6 +94,7 @@ class TreinosFragment : Fragment() {
                 val crucifixoRetoComHalter = document["crucifixoRetoComHalter"].toString()                       //10
                 val crucifixoInclinadoComHalter = document["crucifixoInclinadoComHalter"].toString()             //11
                 val crucifixoArticuladoNaMaquina = document["crucifixoArticuladoNaMaquina"].toString()           //12
+
 
                 if (supinoRetoComBarraLivre == "Selecionado") {
                     val linearLayout1 = binding.linear1
@@ -109,6 +117,28 @@ class TreinosFragment : Fragment() {
                     linearLayout1.layoutParams = params1
                 }
 
+
+                binding.linear1.setOnClickListener(){
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                                ref.update("video", "video1")
+                                    .addOnSuccessListener {
+                                        Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                    }
+                                    .addOnFailureListener { e ->
+                                        Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                    }
+                            }
+                        }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
+                    }
+
+
                 if (supinoInclinadoComBarraLivre == "Selecionado") {
                     val linearLayout2 = binding.linear2
                     linearLayout2.visibility = View.VISIBLE
@@ -130,6 +160,27 @@ class TreinosFragment : Fragment() {
                     linearLayout2.layoutParams = params2
                 }
 
+
+                binding.linear2.setOnClickListener() {
+
+
+                    ref.get().addOnSuccessListener { document ->
+                        if (document != null) {
+                            ref.update("video", "video2")
+                                .addOnSuccessListener {
+                                    Log.d("Firestore", "Campo 'video' atualizado com sucesso.")
+                                }
+                                .addOnFailureListener { e ->
+                                    Log.w("Firestore", "Erro ao atualizar o campo 'video'", e)
+                                }
+                        }
+                    }
+
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        Navigation.findNavController(view).navigate(R.id.action_nav_treinos_to_nav_tela_video)
+                    },1000)
+
+                }
 
                 if (supinoDeclinadoComBarraLivre == "Selecionado") {
                     val linearLayout3 = binding.linear3
@@ -358,8 +409,6 @@ class TreinosFragment : Fragment() {
                     params12.height = 0 // Define a altura como 0 quando o layout está invisível
                     linearLayout12.layoutParams = params12
                 }
-
-
 
 
             }

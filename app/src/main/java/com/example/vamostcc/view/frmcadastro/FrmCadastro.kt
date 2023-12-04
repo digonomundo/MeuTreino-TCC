@@ -6,11 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.vamostcc.classes.Usuario
 import com.example.vamostcc.databinding.ActivityFrmCadastroBinding
 import com.example.vamostcc.view.frmlogin.frmLogin
 import com.example.vamostcc.view.home.home
-import com.example.vamostcc.view.telausuario.telaUsuario
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth

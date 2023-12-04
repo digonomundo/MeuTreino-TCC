@@ -10,7 +10,6 @@ import java.util.Locale
 import android.widget.Toast
 import com.example.vamostcc.databinding.ActivityHomeBinding
 import com.example.vamostcc.view.telaprincipal.telaPrincipal
-import com.example.vamostcc.view.telausuario.telaUsuario
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -46,14 +45,12 @@ class home : AppCompatActivity() {
                 val altura = strAltura.toDouble()
                 val idade = idade.toInt()
 
-
                 val usuariosMap = hashMapOf(
                     "nome" to (nome),
                     "peso" to (peso),
                     "altura" to (altura),
                     "idade" to (idade)
                 )
-
 
                 val idUser = FirebaseAuth.getInstance().currentUser!!.uid
 
@@ -67,10 +64,8 @@ class home : AppCompatActivity() {
 
                     }
 
-
                     var entrar = Intent (this , telaPrincipal::class.java)
                     startActivity(entrar)
-
             }
         }
     }

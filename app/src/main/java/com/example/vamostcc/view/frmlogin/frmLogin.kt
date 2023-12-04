@@ -8,7 +8,6 @@ import com.example.vamostcc.databinding.ActivityFrmLoginBinding
 import com.example.vamostcc.view.frmrecuperarsenha.telaRecuperarSenha
 import com.example.vamostcc.view.frmcadastro.frmCadastro
 import com.example.vamostcc.view.telaprincipal.telaPrincipal
-import com.example.vamostcc.view.telausuario.telaUsuario
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth

@@ -52,8 +52,6 @@ class telaPrincipal : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        //NAVIGATION BUTTOM
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
