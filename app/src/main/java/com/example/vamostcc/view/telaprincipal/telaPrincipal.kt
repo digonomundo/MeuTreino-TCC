@@ -46,7 +46,7 @@ class telaPrincipal : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_telaUsuario
+                R.id.nav_home, R.id.nav_telaUsuario, R.id.nav_desenvolvedores
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -56,7 +56,7 @@ class telaPrincipal : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.tela_principal, menu)
+
         return true
     }
 

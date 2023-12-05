@@ -49,9 +49,4 @@
         android:label="@string/menu_desenvolvedores"
         tools:layout="@layout/fragment_desenvolvedores" />
 
-
-
-
-
-
 </navigation>
