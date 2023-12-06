@@ -65,10 +65,4 @@ class telaPrincipal : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    /*fun esconderNavigationButton(): Boolean {
-        val cardbutton : CardView = binding.cardBottomNav
-        cardbutton.visibility = View.INVISIBLE
-        return true
-    }*/
-
 }
