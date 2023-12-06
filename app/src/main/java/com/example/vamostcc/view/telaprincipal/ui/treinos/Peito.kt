@@ -15,8 +15,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.vamostcc.R
 import com.example.vamostcc.databinding.FragmentPeitoBinding
-
-
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 

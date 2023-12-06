@@ -15,9 +15,25 @@
     <string name="menu_home">Home</string>
     <string name="menu_treinos">Treinos</string>
     <string name="menu_perfil_usuario">Perfil De Usuario</string>
-    <string name="menu_montagem_treinos">Montagem De Treinos</string>
     <string name="menu_tela_video">Vídeo do seu treino</string>
     <string name="menu_desenvolvedores">Desenvolvedores</string>
+
+    <!--SEPARAÇÕES TREINOS-->
+    <string name="menu_abdomen">Abdomen</string>
+    <string name="menu_bracos">Braços</string>
+    <string name="menu_costas">Costas</string>
+    <string name="menu_ombros">Ombros</string>
+    <string name="menu_pernas">Pernas</string>
+
+
+    <!--MONTAGENS DE TREINOS-->
+    <string name="menu_montagem_treinos">Montagem De Treinos</string>
+    <string name="menu_montagem_peito">Montagem De Abdomen</string>
+    <string name="menu_montagem_bracos">Montagem De Braços</string>
+    <string name="menu_montagem_costas">Montagem De Costas</string>
+    <string name="menu_montagem_ombros">Montagem De Ombros</string>
+    <string name="menu_montagem_pernas">Montagem De Pernas</string>
+    <string name="menu_montagem_abdomen">Montagem De Abdomen</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

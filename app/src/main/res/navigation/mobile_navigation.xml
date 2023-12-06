@@ -12,22 +12,6 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_treinos"
-        android:name="com.example.vamostcc.view.telaprincipal.ui.treinos.Peito"
-        android:label="@string/menu_treinos"
-        tools:layout="@layout/fragment_peito" >
-        <action
-            android:id="@+id/action_nav_treinos_to_nav_tela_video"
-            app:destination="@id/nav_tela_video" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/nav_montagem_treinos"
-        android:name="com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.MontagemTreinosFragment"
-        android:label="@string/menu_montagem_treinos"
-        tools:layout="@layout/fragment_montagem_treinos" />
-
-    <fragment
         android:id="@+id/nav_telaUsuario"
         android:name="com.example.vamostcc.view.telaprincipal.ui.perfilusuario.TelaUsuarioFragment"
         android:label="@string/menu_perfil_usuario"
@@ -43,10 +27,82 @@
             app:destination="@id/nav_treinos" />
     </fragment>
 
+    <!--TIPOS DE TREINOS-->
     <fragment
-        android:id="@+id/nav_desenvolvedores"
-        android:name="com.example.vamostcc.view.telaprincipal.ui.sobre.Desenvolvedores"
-        android:label="@string/menu_desenvolvedores"
-        tools:layout="@layout/fragment_desenvolvedores" />
+        android:id="@+id/nav_peito"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.treinos.Peito"
+        android:label="@string/menu_treinos"
+        tools:layout="@layout/fragment_peito" >
+        <action
+            android:id="@+id/action_nav_treinos_to_nav_tela_video"
+            app:destination="@id/nav_tela_video" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_abdomen"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.treinos.Abdomen"
+        android:label="@string/menu_abdomen"
+        tools:layout="@layout/fragment_abdomen" />
+
+    <fragment
+        android:id="@+id/nav_bracos"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.treinos.Bracos"
+        android:label="@string/menu_bracos"
+        tools:layout="@layout/fragment_bracos" />
+
+    <fragment
+        android:id="@+id/nav_costas"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.treinos.Costas"
+        android:label="@string/menu_costas"
+        tools:layout="@layout/fragment_costas" />
+
+    <fragment
+        android:id="@+id/nav_ombros"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.treinos.Ombros"
+        android:label="@string/menu_ombros"
+        tools:layout="@layout/fragment_ombros" />
+
+    <fragment
+        android:id="@+id/nav_pernas"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.treinos.Pernas"
+        android:label="@string/menu_pernas"
+        tools:layout="@layout/fragment_pernas" />
+
+    <!--MONTAGENS DE TREINOS-->
+    <fragment
+        android:id="@+id/nav_montagem_peito"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.montagemPeito"
+        android:label="@string/menu_montagem_peito"
+        tools:layout="@layout/fragment_montagem_peito" />
+
+    <fragment
+        android:id="@+id/nav_montagem_abdomen"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.montagemAbdomen"
+        android:label="@string/menu_montagem_abdomen"
+        tools:layout="@layout/fragment_montagem_abdomen" />
+
+    <fragment
+        android:id="@+id/nav_montagem_bracos"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.montagemBracos"
+        android:label="@string/menu_montagem_bracos"
+        tools:layout="@layout/fragment_montagem_bracos" />
+
+    <fragment
+        android:id="@+id/nav_montagem_costas"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.montagemCostas"
+        android:label="@string/menu_montagem_costas"
+        tools:layout="@layout/fragment_montagem_costas" />
+
+    <fragment
+        android:id="@+id/nav_montagem_ombro"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.montagemOmbros"
+        android:label="@string/menu_montagem_ombros"
+        tools:layout="@layout/fragment_montagem_ombros" />
+
+    <fragment
+        android:id="@+id/nav_montagem_pernas"
+        android:name="com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.montagemPernas"
+        android:label="@string/menu_montagem_pernas"
+        tools:layout="@layout/fragment_montagem_pernas" />
 
 </navigation>
