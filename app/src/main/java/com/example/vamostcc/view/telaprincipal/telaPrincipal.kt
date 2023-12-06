@@ -1,12 +1,7 @@
 package com.example.vamostcc.view.telaprincipal
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.widget.LinearLayout
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -15,15 +10,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
-import androidx.fragment.app.Fragment
 import com.example.vamostcc.R
 import com.example.vamostcc.databinding.ActivityTelaPrincipalBinding
-import com.example.vamostcc.view.home.home
-import com.example.vamostcc.view.telaprincipal.ui.home.HomeFragment
-import com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.MontagemTreinosFragment
-import com.example.vamostcc.view.telaprincipal.ui.perfilusuario.TelaUsuarioFragment
-import com.example.vamostcc.view.telaprincipal.ui.treinos.TreinosFragment
 
 
 class telaPrincipal : AppCompatActivity() {

@@ -5,24 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Switch
-import androidx.fragment.app.FragmentContainer
-import com.example.vamostcc.R
 import com.example.vamostcc.databinding.FragmentMontagemTreinosBinding
-import android.content.Intent
-import android.graphics.Color
 import android.util.Log
-import android.widget.TextView
-import android.widget.Toast
-import androidx.cardview.widget.CardView
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation
-import com.example.vamostcc.view.frmlogin.frmLogin
-import com.example.vamostcc.view.telaprincipal.ui.home.HomeFragment
-import com.example.vamostcc.view.telaprincipal.ui.treinos.TreinosFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import java.util.*
 
 
 class MontagemTreinosFragment : Fragment() {

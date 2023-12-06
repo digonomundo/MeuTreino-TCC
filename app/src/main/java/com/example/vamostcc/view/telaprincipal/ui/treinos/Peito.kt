@@ -1,6 +1,5 @@
 package com.example.vamostcc.view.telaprincipal.ui.treinos
 
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -11,23 +10,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.vamostcc.R
+import com.example.vamostcc.databinding.FragmentPeitoBinding
 
-import com.example.vamostcc.databinding.FragmentTreinosBinding
-import com.example.vamostcc.view.frmlogin.frmLogin
-import com.example.vamostcc.view.telaprincipal.ui.home.HomeFragment
-import com.example.vamostcc.view.telaprincipal.ui.montagemTreinos.MontagemTreinosFragment
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 
-class TreinosFragment : Fragment() {
+class Peito : Fragment() {
 
-    private var _binding: FragmentTreinosBinding? = null
+    private var _binding: FragmentPeitoBinding? = null
     private val binding get() = _binding!!
 
     private var db = FirebaseFirestore.getInstance()
@@ -41,7 +37,7 @@ class TreinosFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTreinosBinding.inflate(inflater, container, false)
+        _binding = FragmentPeitoBinding.inflate(inflater, container, false)
         return binding.root
     }
 
