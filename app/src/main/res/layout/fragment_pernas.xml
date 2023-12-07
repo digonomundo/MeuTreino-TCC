@@ -110,7 +110,7 @@
 
         <LinearLayout
             android:id="@+id/linear3"
-            android:background="@drawable/agachamento_hack"
+            android:background="@drawable/divisao_partes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"

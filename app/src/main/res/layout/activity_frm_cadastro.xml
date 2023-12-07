@@ -30,6 +30,8 @@
             android:drawableLeft="@drawable/baseline_email_24"
             android:hint="  Email"
             android:inputType="textEmailAddress"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:maxLines="1"
             android:padding="15dp" />
 
@@ -44,6 +46,8 @@
             android:drawableLeft="@drawable/baseline_lock_24"
             android:hint="  Senha"
             android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:maxLines="1"
             android:padding="15dp" />
 

@@ -26,6 +26,8 @@
         android:background="@drawable/edt_circular"
         android:drawableLeft="@drawable/baseline_email_24"
         android:hint="  Digite seu Email"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
         android:maxLines="1"
         android:padding="15dp" />

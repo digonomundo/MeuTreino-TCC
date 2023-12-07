@@ -30,6 +30,8 @@
             android:background="@drawable/edt_circular"
             android:drawableLeft="@drawable/baseline_person_24"
             android:hint=" Seu Nome:"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:inputType="text"
             android:maxLines="1"
             android:padding="15dp" />
@@ -44,6 +46,8 @@
             android:background="@drawable/edt_circular"
             android:drawableLeft="@drawable/baseline_monitor_weight_24"
             android:hint=" Informe seu peso: "
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:inputType="numberDecimal"
             android:maxLines="1"
             android:padding="15dp" />
@@ -59,6 +63,8 @@
             android:drawableLeft="@drawable/baseline_height_24"
             android:hint=" Sua Altura em Metros: "
             android:inputType="numberDecimal"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:maxLines="1"
             android:padding="15dp" />
 
@@ -73,6 +79,8 @@
             android:drawableLeft="@drawable/baseline_date_range_24"
             android:hint="  Idade:"
             android:inputType="number"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:maxLines="1"
             android:padding="15dp" />
 
