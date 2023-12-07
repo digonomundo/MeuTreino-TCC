@@ -43,6 +43,12 @@ class Peito : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        binding.btnEditar.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_nav_peito_to_nav_montagem_peito)
+        }
+
+
         val Linearlayout1 : LinearLayout = binding.linear1
         Linearlayout1.visibility = View.INVISIBLE
 
@@ -99,7 +105,7 @@ class Peito : Fragment() {
 
                     val imgSupino: Drawable = resources.getDrawable(R.drawable.img_supino)
                     binding.txtTitulo1.text = "Supino Reto"
-                    binding.txtTitulo1.setTextColor(Color.BLACK)
+                    binding.txtTitulo1.setTextColor(Color.WHITE)
                     binding.txtDesc1.setText("Com Barra Livre")
                     binding.txtDesc1.setTextColor(Color.MAGENTA)
                     binding.imageView1.setImageDrawable(imgSupino)
@@ -142,7 +148,7 @@ class Peito : Fragment() {
 
                     val imgSupinoInclinado: Drawable = resources.getDrawable(R.drawable.supinoinclinado)
                     binding.txtTitulo2.text = "Supino Inclinado"
-                    binding.txtTitulo2.setTextColor(Color.BLACK)
+                    binding.txtTitulo2.setTextColor(Color.WHITE)
                     binding.txtDesc2.setText("Com barra livre")
                     binding.txtDesc2.setTextColor(Color.MAGENTA)
                     binding.imageView2.setImageDrawable(imgSupinoInclinado)
@@ -185,7 +191,7 @@ class Peito : Fragment() {
 
                     val imgSupinoDeclinado: Drawable = resources.getDrawable(R.drawable.supinodeclinado)
                     binding.txtTitulo3.setText("Supino Declinado")
-                    binding.txtTitulo3.setTextColor(Color.BLACK)
+                    binding.txtTitulo3.setTextColor(Color.WHITE)
                     binding.txtDesc3.setText("Com barra livre")
                     binding.txtDesc3.setTextColor(Color.MAGENTA)
                     binding.imageView3.setImageDrawable(imgSupinoDeclinado)
@@ -227,7 +233,7 @@ class Peito : Fragment() {
 
                     val imgSupinoRetoComHalter: Drawable = resources.getDrawable(R.drawable.supinoretocomhalter)
                     binding.txtTitulo4.text = "Supino Reto"
-                    binding.txtTitulo4.setTextColor(Color.BLACK)
+                    binding.txtTitulo4.setTextColor(Color.WHITE)
                     binding.txtDesc4.setText("Com Halteres")
                     binding.txtDesc4.setTextColor(Color.MAGENTA)
                     binding.imageView4.setImageDrawable(imgSupinoRetoComHalter)
@@ -270,9 +276,9 @@ class Peito : Fragment() {
 
                     val imgSupinoInclinadoComHalter: Drawable = resources.getDrawable(R.drawable.supinoinclinadocomhalter)
                     binding.txtTitulo5.text = "Supino Inclinado"
-                    binding.txtTitulo5.setTextColor(Color.BLACK)
+                    binding.txtTitulo5.setTextColor(Color.WHITE)
                     binding.txtDesc5.setText("Com Halter")
-                    binding.txtDesc5.setTextColor(Color.RED)
+                    binding.txtDesc5.setTextColor(Color.MAGENTA)
                     binding.imageView5.setImageDrawable(imgSupinoInclinadoComHalter)
                 } else {
                     val linearLayout5 = binding.linear5
@@ -313,9 +319,9 @@ class Peito : Fragment() {
 
                     val imgSupinoDeclinadoComHalter: Drawable = resources.getDrawable(R.drawable.supinodeclinadocomhalter)
                     binding.txtTitulo6.text = "Supino Declinado"
-                    binding.txtTitulo6.setTextColor(Color.BLACK)
+                    binding.txtTitulo6.setTextColor(Color.WHITE)
                     binding.txtDesc6.setText("Com Halteres")
-                    binding.txtDesc6.setTextColor(Color.RED)
+                    binding.txtDesc6.setTextColor(Color.MAGENTA)
                     binding.imageView6.setImageDrawable(imgSupinoDeclinadoComHalter)
                 } else {
                     val linearLayout6 = binding.linear6
@@ -356,9 +362,9 @@ class Peito : Fragment() {
 
                     val imgSupinoRetoComBarraGuiada: Drawable = resources.getDrawable(R.drawable.supinonabarraguiada)
                     binding.txtTitulo7.text = "Supino Reto"
-                    binding.txtTitulo7.setTextColor(Color.BLACK)
+                    binding.txtTitulo7.setTextColor(Color.WHITE)
                     binding.txtDesc7.setText("Com barra Guiada")
-                    binding.txtDesc7.setTextColor(Color.RED)
+                    binding.txtDesc7.setTextColor(Color.MAGENTA)
                     binding.imageView7.setImageDrawable(imgSupinoRetoComBarraGuiada)
                 } else {
                     val linearLayout7 = binding.linear7
@@ -399,9 +405,9 @@ class Peito : Fragment() {
 
                     val imgSupinoInclinadoComBarraGuiada: Drawable = resources.getDrawable(R.drawable.supinoinclinadonabarraguiada)
                     binding.txtTitulo8.text = "Supino Inclinado"
-                    binding.txtTitulo8.setTextColor(Color.BLACK)
+                    binding.txtTitulo8.setTextColor(Color.WHITE)
                     binding.txtDesc8.setText("Com barra Guiada")
-                    binding.txtDesc8.setTextColor(Color.RED)
+                    binding.txtDesc8.setTextColor(Color.MAGENTA)
                     binding.imageView8.setImageDrawable(imgSupinoInclinadoComBarraGuiada)
                 } else {
                     val linearLayout8 = binding.linear8
@@ -442,9 +448,9 @@ class Peito : Fragment() {
 
                     val imgCrucifixoSentadoNaMaquina: Drawable = resources.getDrawable(R.drawable.crucifixosentadonamaquina)
                     binding.txtTitulo9.text = "Crucifixo Sentado"
-                    binding.txtTitulo9.setTextColor(Color.BLACK)
+                    binding.txtTitulo9.setTextColor(Color.WHITE)
                     binding.txtDesc9.setText("Na máquina")
-                    binding.txtDesc9.setTextColor(Color.RED)
+                    binding.txtDesc9.setTextColor(Color.MAGENTA)
                     binding.imageView9.setImageDrawable(imgCrucifixoSentadoNaMaquina)
                 } else {
                     val linearLayout9 = binding.linear9
@@ -485,9 +491,9 @@ class Peito : Fragment() {
 
                     val imgCrucifixoRetoComHalter: Drawable = resources.getDrawable(R.drawable.crucifixocomhalter)
                     binding.txtTitulo10.text = "Crucifixo Reto"
-                    binding.txtTitulo10.setTextColor(Color.BLACK)
+                    binding.txtTitulo10.setTextColor(Color.WHITE)
                     binding.txtDesc10.setText("Com Halteres")
-                    binding.txtDesc10.setTextColor(Color.RED)
+                    binding.txtDesc10.setTextColor(Color.MAGENTA)
                     binding.imageView10.setImageDrawable(imgCrucifixoRetoComHalter)
                 } else {
                     val linearLayout10 = binding.linear10
@@ -528,9 +534,9 @@ class Peito : Fragment() {
 
                     val imgCrucifixoInclinadoComHalter: Drawable = resources.getDrawable(R.drawable.crucifixoinclinadocomhalter)
                     binding.txtTitulo11.text = "Crucifixo Inclinado"
-                    binding.txtTitulo11.setTextColor(Color.BLACK)
+                    binding.txtTitulo11.setTextColor(Color.WHITE)
                     binding.txtDesc11.setText("Com halteres")
-                    binding.txtDesc11.setTextColor(Color.RED)
+                    binding.txtDesc11.setTextColor(Color.MAGENTA)
                     binding.imageView11.setImageDrawable(imgCrucifixoInclinadoComHalter)
                 } else {
                     val linearLayout11 = binding.linear11
@@ -571,9 +577,9 @@ class Peito : Fragment() {
 
                     val imgCrucifixoArticuladoNaMaquina: Drawable = resources.getDrawable(R.drawable.crucifixoarticuladonamaquina)
                     binding.txtTitulo12.text = "Crucifixo Articulado"
-                    binding.txtTitulo12.setTextColor(Color.BLACK)
+                    binding.txtTitulo12.setTextColor(Color.WHITE)
                     binding.txtDesc12.setText("Na máquina")
-                    binding.txtDesc12.setTextColor(Color.RED)
+                    binding.txtDesc12.setTextColor(Color.MAGENTA)
                     binding.imageView12.setImageDrawable(imgCrucifixoArticuladoNaMaquina)
                 } else {
                     val linearLayout12 = binding.linear12

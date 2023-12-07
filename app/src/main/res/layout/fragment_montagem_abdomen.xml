@@ -36,15 +36,19 @@
                 android:layout_marginLeft="5dp"
                 android:orientation="vertical">
 
+
+
+
+
                 <TextView
                     android:id="@+id/txtTitulo1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
                     android:text="Abdominal Oblíquio"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="25dp" />
+                    android:textSize="14dp" />
+
 
                 <TextView
                     android:id="@+id/txtDesc1"
@@ -63,9 +67,12 @@
                 android:id="@+id/switch1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
                 />
+
 
         </LinearLayout>
 
@@ -74,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             >
 
@@ -97,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:layout_weight="1"
-                    android:textSize="18dp"
+                    android:textSize="23dp"
                     android:text="Abdominal"
                     android:textColor="@color/black"
                     android:textAlignment="center" />
@@ -128,7 +135,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             >
 
@@ -150,7 +157,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:text="Abdominal Supra"
                     android:textColor="@color/black"
                     android:textAlignment="center" />
@@ -181,7 +188,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             >
 
@@ -203,7 +210,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="25dp"
+                    android:textSize="16dp"
                     android:text="Abdominal Supra"
                     android:textColor="@color/black"
                     android:textAlignment="center" />
@@ -233,7 +240,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             >
 
@@ -255,7 +262,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:text="Abdominal Supra"
                     android:textColor="@color/black"
                     android:textAlignment="center" />
@@ -285,7 +292,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             >
 
@@ -307,7 +314,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:text="Abdominal Supra"
                     android:textColor="@color/black"
                     android:textAlignment="center" />
@@ -337,7 +344,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             >
 
@@ -359,7 +366,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="25dp"
+                    android:textSize="16dp"
                     android:text="Abdominal Infra"
                     android:textColor="@color/black"
                     android:textAlignment="center" />
@@ -389,7 +396,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             >
 
@@ -411,8 +418,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
-                    android:textSize="18dp"
-                    android:text="Abdominal Reto Sentado"
+                    android:textSize="23dp"
+                    android:text="Abdominal"
                     android:textColor="@color/black"
                     android:textAlignment="center" />
 
@@ -441,7 +448,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             >
 

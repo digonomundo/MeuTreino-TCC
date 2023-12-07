@@ -87,7 +87,7 @@ class montagemPeito : Fragment() {
             if (document != null && document.exists()) {
 
                 // Verificar se o campo 'supinoInclinadoComBarraLivre' existe no documento
-                if (document.contains("supinoRetoComBarraLivre")) {
+                if (document.contains("supinoInclinadoComBarraLivre")) {
                     val valorCampo = document.getString("supinoInclinadoComBarraLivre")
 
                     // Definir o estado do Switch com base no valor do campo

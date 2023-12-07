@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import com.example.vamostcc.R
 import com.example.vamostcc.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -22,6 +24,19 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnPeito.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_nav_home_to_nav_peito)
+        }
+
+        binding.btnAbdomen.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_nav_home_to_nav_abdomen)
+        }
+
+        binding.btnPerna.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_nav_home_to_nav_pernas)
+        }
+
 
     }
 
