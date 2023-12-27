@@ -1,21 +1,5 @@
 ### Tcc
 
-                             
-
-## CURSO TÉCNICO EM DESENVOLVIMENTO DE SISTEMAS
-
-
-
-
-Leonardo Marcolino Silva;
-Rodrigo Marques Dias;
-Ruan Pablo Frazão Freitas;
-Vinicius Pedro Spinola;
-
-
-
-
-
 ## MEU TREINO – APLICATIVO DE GERENCIAMENTO E INSTRUÇÃO DE TREINOS DE MUSCULAÇÃO
 
 
