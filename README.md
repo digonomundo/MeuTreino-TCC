@@ -2,7 +2,7 @@
 
                              
 
-CURSO TÉCNICO EM DESENVOLVIMENTO DE SISTEMAS
+## CURSO TÉCNICO EM DESENVOLVIMENTO DE SISTEMAS
 
 
 
@@ -16,7 +16,7 @@ Vinicius Pedro Spinola;
 
 
 
-MEU TREINO – APLICATIVO DE GERENCIAMENTO E INSTRUÇÃO DE TREINOS DE MUSCULAÇÃO
+## MEU TREINO – APLICATIVO DE GERENCIAMENTO E INSTRUÇÃO DE TREINOS DE MUSCULAÇÃO
 
 
 
@@ -24,17 +24,27 @@ MEU TREINO – APLICATIVO DE GERENCIAMENTO E INSTRUÇÃO DE TREINOS DE MUSCULAÇ
 
 
 BARRETOS-SP
-2023
+</br>
+2023
+</br>
 MEU TREINO – APLICATIVO DE GERENCIAMENTO E INSTRUÇÃO DE TREINOS DE MUSCULAÇÃO
+</br>
 
 
-Leonardo Marcolino Silva
-Rodrigo Marques Dias
-Ruan Pablo Frazão Freitas
-Vinicius Pedro Spinola
+Leonardo Marcolino Silva;
+</br>
+Rodrigo Marques Dias;
+</br>
+Ruan Pablo Frazão Freitas;
+</br>
+Vinicius Pedro Spinola;
+
+</br>
+</br>
 
 
-RESUMO
+## RESUMO
+</br>
 
 Este Trabalho de Conclusão de Curso apresenta o processo de desenvolvimento de um aplicativo móvel voltado para academias, com foco em funções avançadas para auxiliar tanto os instrutores quanto os alunos. O aplicativo visa melhorar a experiência dos usuários durante suas atividades físicas, fornecendo recursos como treinamentos personalizados, acompanhamento de progresso, dicas de exercícios. O desenvolvimento do aplicativo envolveu etapas de pesquisas, design, implementação e testes. O resultado é um aplicativo funcional e intuitivo que contribui para a otimização dos treinos e para o alcance de metas de condicionamento físico de forma eficaz.
 Palavras-chave: aplicativo móvel, academia, treinamento personalizado, acompanhamento de progresso, exercícios.
@@ -44,8 +54,9 @@ Palavras-chave: aplicativo móvel, academia, treinamento personalizado, acompanh
 
 
 
+</br>
 
-ABSTRACT
+## ABSTRACT
 
 This Course Completion Work presents the development process of a mobile application aimed at gyms, focusing on advanced functions to assist both instructors and students. The application aims to improve users' experience during their physical activities, providing features such as personalized training, progress tracking, exercise tips. Application development involved research, design, implementation and testing stages. The result is a functional and intuitive application that helps you optimize your workouts and effectively reach your fitness goals.
 Keywords: mobile app, gym, personalized training, progress tracking, exercises.
@@ -57,7 +68,7 @@ Keywords: mobile app, gym, personalized training, progress tracking, exercises.
 
 
 
-INTRODUÇÃO
+## INTRODUÇÃO
 
 Partindo da ideia fundamental de que é essencial para todos nós realizarmos atividade física para melhorar o funcionamento do nosso organismo, levando em consideração nossa constituição genética, mesmo diante da presença de doenças crônicas. É crucial que os esportes dedicados à atividade física sejam adaptados às condições de saúde e às especificações individuais. Nos últimos anos, a utilização de dispositivos móveis tornou-se uma parte integrante do cotidiano, fornecendo uma ampla gama de aplicativos destinados a aprimorar diversos aspectos da vida cotidiana.
 A musculação na atualidade é uma das práticas esportivas que mais cresce em número de praticantes, sendo os objetivos dos indivíduos na saúde e na estética. Tendo como exemplo a redução do percentual de gordura, ganhos de massas musculares, garantia de mais disposição física, diminuição do risco de diabetes, e uma ótima qualidade de vida (MINISTÉRIO DA DEFESA, 2021).
@@ -96,14 +107,14 @@ O aplicativo desenvolvido possui a tela inicial para login, onde pode-se “loga
 Após o desenvolvimento e lançamento do aplicativo, foram coletados feedbacks positivos de usuários. A facilidade de uso, a personalização dos treinamentos e o acompanhamento de progresso foram destacados como pontos fortes. Além disso, observou-se um aumento na motivação dos usuários em alcançar suas metas de condicionamento físico. Assim, tendo a ideia inicial aprovada com sucesso, fazendo com que os alunos tenham a continuidade na vida de atividade física.
  
 
-CONCLUSÃO
+## CONCLUSÃO
 
 O aplicativo desenvolvido demonstrou ser uma ferramenta eficaz para melhorar a experiência dos usuários em academias, fornecendo funções avançadas que otimizam os treinamentos e auxiliam no alcance de objetivos de condicionamento físico. A integração de recursos como treinamentos personalizados, acompanhamento de progresso e interação social contribuiu para uma abordagem mais holística e motivadora para a prática de atividades físicas. 
 
 
 
 
-REFERÊNCIAS
+## REFERÊNCIAS
 
 ACAD. Por que você deve investir em tecnologia para a academia? 11/03/2020. Disponível em: <https://acadbrasil.com.br/blog/destaques/tecnologia-para academia/#:~:text=Como%20falamos%20acima%2C%20a%20tecnologia,e%20potencializar%20os%20seus%20resultados!>. Acesso em: 27 out. 2023.
 BENTO, Alexandre. BALAN, Diego. NEGRELLO, Douglas. HORI, Hesron. Faculdade Santa Cruz. Importância da tecnologia no acompanhamento das atividades dos alunos de academia. 26/01/2014. Disponível em: <https://pt.slideshare.net/alexandrerbento/importncia-da-tecnologia-no-acompanhamento-das-atividades-dos-alunos-de-academia>. Acesso em: 27 out. 2023.
