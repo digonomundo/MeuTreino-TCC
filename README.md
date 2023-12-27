@@ -1,6 +1,7 @@
 ### MEU TREINO – APLICATIVO DE GERENCIAMENTO E INSTRUÇÃO DE TREINOS DE MUSCULAÇÃO
 </br>
 
+# ETEC CEL. Raphael Brandão 
 
 Leonardo Marcolino Silva;
 </br>
