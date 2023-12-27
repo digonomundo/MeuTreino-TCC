@@ -7,10 +7,10 @@ CURSO TÉCNICO EM DESENVOLVIMENTO DE SISTEMAS
 
 
 
-Leonardo Marcolino Silva
-Rodrigo Marques Dias
-Ruan Pablo Frazão Freitas
-Vinicius Pedro Spinola
+Leonardo Marcolino Silva;
+Rodrigo Marques Dias;
+Ruan Pablo Frazão Freitas;
+Vinicius Pedro Spinola;
 
 
 
