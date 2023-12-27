@@ -1,8 +1,3 @@
-
-BARRETOS-SP
-</br>
-2023
-</br>
 ### MEU TREINO – APLICATIVO DE GERENCIAMENTO E INSTRUÇÃO DE TREINOS DE MUSCULAÇÃO
 </br>
 
@@ -109,3 +104,11 @@ PERSONAL, Mfit. Evolução na Academia: como o personal pode medir esse progress
 SOUZA, Marcos de. Benefícios da Tecnologia: Potencializando a Vida Moderna. 26/07/2023. Disponível em: <https://obrasildagente.com/beneficios-da-tecnologia-potencializando-a-vida-moderna/>. Acesso em: 25 out. 2023
 VIRTUAL, Personal. Qual a Importância e como Acompanhar a Evolução dos Treinos? Em 2019. Disponível em: <https://blog.meupersonalvirtual.com.br/como-acompanhar-a-evolucao-nos-treinos/>. Acesso em: 25 out. 2023.
 
+
+</br>
+</br>
+
+BARRETOS-SP
+</br>
+2023
+</br>
